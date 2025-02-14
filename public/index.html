@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
@@ -11,12 +11,12 @@
     
     
     
-      <meta name="robots" content="noindex, nofollow">
+      <meta name="robots" content="index, follow">
     
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.d05fb5f317fcf33b3a52936399bdf6f47dc776516e1692e412ec7d76f4a5faa2.css" >
 
 
 
@@ -36,23 +36,25 @@
     
 
     
-      <link rel="canonical" href="http://localhost:1313/">
+      <link rel="canonical" href="https://example.org/">
     
 
-    <meta property="og:url" content="http://localhost:1313/">
+    <meta property="og:url" content="https://example.org/">
   <meta property="og:site_name" content="My New Hugo Site">
   <meta property="og:title" content="My New Hugo Site">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="My New Hugo Site">
-  <meta itemprop="datePublished" content="2025-02-14T21:17:41+09:00">
-  <meta itemprop="dateModified" content="2025-02-14T21:17:41+09:00">
+  <meta itemprop="datePublished" content="2025-02-14T23:46:41+09:00">
+  <meta itemprop="dateModified" content="2025-02-14T23:46:41+09:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="My New Hugo Site">
 
+      
+    
 	
-  </head><body class="ma0 avenir bg-near-white development">
+  </head><body class="ma0 avenir bg-near-white production">
 
     
 
@@ -112,6 +114,172 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/github%E3%81%AE%E6%80%9D%E6%83%B3%E3%81%A8%E9%9D%9Eit%E5%88%86%E9%87%8E/" class="color-inherit dim link">
+            GitHubの「思想」と非IT分野
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          <h1 id="githubの思想と非it分野">GitHubの「思想」と非IT分野</h1>
+<h2 id="はじめに">はじめに</h2>
+<h3 id="筆者について">筆者について</h3>
+<ul>
+<li>とある企業で全くITエンジニアとは関係ない業種、業務をやっている立場。作業者の立場であり、CxOの方々やVPoXみたいなエグゼクティブなレベルでのDecision-Makingには関われない程度の下っ端。</li>
+<li>職種としては法務関連が近いため、普段法律文書、特に契約書を扱う作業をしている。</li>
+<li>業務内容としては、契約書をプロダクトとしたPdMか、締結というプロジェクトゴールまでに必要なすべてをやるPjMという感じ。ラベルはどうでも良いがそういう「ゴールのためのお膳立てと円滑進行のために全てをやる」立場になってしまった。</li>
+<li>個人的には論文の執筆管理に使った関係でGitHubを使ったバージョン管理はなんとなくわかるが、他人と共同作業に使ったことはない。</li>
+<li>コーディングは経験があまりなく、作られたものを眺めて３割理解できるぐらい。VBAは触りたくない。</li>
+</ul>
+<h3 id="法務領域における作業のサイクル">法務領域における作業のサイクル</h3>
+<p>法務業務というのは、法律の社内エキスパートとしての自分の部署、業務を担当する法律のエキスパートではない部署、そしてライセンスのある社外エキスパートである顧問弁護士、という社内ステークホルダー、そして契約書の場合は、それを締結する相手先という社外ステークホルダーが存在する。</p>
+<p>一般的な契約書業務というのは、この文書のレビューのためにMicrosoft Wordを使うことが圧倒的に多い。それらは主にコメント機能と変更履歴の記録機能を使って回している人が多い（はず）。</p>
+<p>実務的には…</p>
+<ol>
+<li>このファイルに社内外のエキスパートがコメントをつけ論点指摘</li>
+<li>そのコメントを事業担当部署が確認</li>
+<li>最終的に修正内容を考えた上で第n校を作成し</li>
+<li>第n+1校を締結先に提示する</li>
+</ol>
+<p>というのが1つのサイクルになってくる。以下これを繰り返して、最終校に至るまでに交渉をする、というのが目標になる。</p>
+<p>場合によっては、契約書やコメントの翻訳、複数のステークホルダーとの利害調整、付随するレイヤー8以上との調整、目標に至るまでの交渉戦略立案と、それに基づいた変更提案の仕方についての議論など、結構手間のかかる作業が多い。</p>
+<h2 id="問題意識">問題意識</h2>
+<p>このレビュープロセスは、シンプルな数ページの契約書であれば、Microsoft Wordだけでもちょっとした工夫でどうにかなる。
+ただ、これが数十ページ、関わるステークホルダーが10に近くなると、論点が100を超え、それぞれについて人間の処理能力で回すことに限界が出てくる。タスクによっては翻訳が挟まることもあり、作業工数はどんどん上がっていく。</p>
+<p>そのために業務量が増大していて、コミュニケーションに問題が起きていて、全体の管理に過大なコストがかかってしまっている、という混沌とした状況をどうにかしたい、という欲求だけがあった。</p>
+<p>コメントスレッドに進捗管理と議論と実際の変更点の議論が同じところで行われているのが問題に思えた。</p>
+<p>漠然と</p>
+<ul>
+<li>「論点の進捗トラッキング」</li>
+<li>「論点についての検討・意見集約」</li>
+<li>「実際に作業するファイルに加える変更」</li>
+</ul>
+<p>の間に存在することはわかったが、問題の切り分け方の指針が、いくら探してもしっくり来るものが出てこない。</p>
+<p>法務領域というのは、様々な兼ね合いで表に情報が出せなかったり、IT業界と遠い諸々の理由があり、いまいちオンライン空間に情報が出てこないというのが現状である。
+逆にIT業界側からの記事は往々にしてツールそのもの、技術そのもの、また思想レベルであっても、その実装については「IT業界における」という枕詞がついていることが常で、参考にできそうな情報というのは案外転がっていない。</p>
+<h2 id="githubの思想を移植する">GitHubの思想を移植する</h2>
+<p>IT業界で仕事をしている友人にこういう問題意識をぶつけてみて、こうしたコミュニケーションの混沌に秩序をもたらす手法のベストプラクティスを聞いてみた。</p>
+<p>出てきたのは「GitHubの思想なんじゃね？」というところだった。特にIssueとPull requestの切り分けの思想ではないか、と指摘を受ける。GitHubを組織的なコンテクストで使ったことがないのでIssueもPull Requestも使ったことがなかったが、友人の話と自分で調べた感じ、下記のような感じらしい。</p>
+<blockquote>
+<p>Issue：今リリースされているコードの問題、新規機能追加要望といった「変更のための問題提起」
+Pull Request：BranchしてIssueを解決するための変更を加えたコードを、Issueと紐つけて確認依頼をする「解決策の組み入れ依頼」</p></blockquote>
+<p>そしてこのIssueとそれにぶら下がるコメントも「原因特定などを通して問題提起の内容の精度を高め、それを論点として開発のタスクリストに加えるかどうか」という機能を持っているようである。
+Pull Requestにもコメントがあるが、これは逆に「Issueを解決するためのコードの変更点についてのみ議論し、新規の論点は立てない」という運用思想がどうもあるらしい。</p>
+<p>もちろんローカルルールかもしれないが、ここで重要なのは「混沌に秩序をもたらす思想」のあり方であって、実際にどう線を引くか、というディティールは、IT業界の常識とは異なる分野に適用するにあたっては、全く重要ではない枝葉末節でしかない。</p>
+<h2 id="思想を踏まえたうえでの現状">思想を踏まえたうえでの現状</h2>
+<p>今の業務フローを見ながら、GitHubの思想の用語でそれを表現すると、</p>
+<ul>
+<li>レポジトリたる契約書について、Issueが100＋個立っていて、</li>
+<li>Issueについての議論と、方針が決まったあと契約書を変更して交渉するためのPull Requst的な領域の議論が同じところで切り分けなく行われていて</li>
+<li>フィルタや検索、優先度タグといった可視性のコントロールの聞かない、ほかツールとの連携もないプラットフォームで作業をせねばならず</li>
+<li>やむを得ず作業者が人力Power Autmateコネクターとしてそれぞれ連携していないツール間を繋いでいて</li>
+<li>その環境で社内外ステークホルダー4階層30+人ほどの進捗管理とコード修正をミスなく行う</li>
+</ul>
+<p>みたいになっている、ということになる。マジ？</p>
+<p>適性があったとしても人力コネクター（ルビ：コピペおじさん）やりたくないし、IssueとPull Requestが混沌と混ざり合って100＋件のアクションアイテムが溜まったリポジトリ、誰も見たくないはずである。</p>
+<p>これが幸せを生んでいるはずがなく、現に同僚が死にそうな顔をしているし、エキスパート部署もかなり面白い顔になってしまっている。さて、このカオスに秩序をもたらすために、GitHubの思想を応用することはできないものか。</p>
+<hr>
+<p>[[MS365環境での「Poor Man&rsquo;s GitHub」を法務業務に 1]]</p>
+        </div>
+        <a href="/posts/github%E3%81%AE%E6%80%9D%E6%83%B3%E3%81%A8%E9%9D%9Eit%E5%88%86%E9%87%8E/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/ms365%E7%92%B0%E5%A2%83%E3%81%A7%E3%81%AEpoor-mans-github%E3%82%92%E6%B3%95%E5%8B%99%E6%A5%AD%E5%8B%99%E3%81%AB/" class="color-inherit dim link">
+            MS365環境での「Poor Mans GitHub」を法務業務に
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          <h1 id="ms365環境でのpoor-mans-githubを法務業務に">MS365環境での「Poor Man&rsquo;s GitHub」を法務業務に</h1>
+<h2 id="poor-mans-githubのススメまたは持たざるもののdx">「Poor man&rsquo;s GitHub」のススメ、または持たざるもののDX</h2>
+<p>思想を実際のフローに落とし込むために最も簡単な手段は「その思想で作られたツールを導入すること」である。要はGitHubを導入してしまえばいいのだ。実際Wantedlyはそういうことをやっているらしい。</p>
+<p><strong>これは最初からボツにする。</strong></p>
+<p>エンジニア諸氏からは「じゃあGitLabは？」「GitHub Desktop使えば」という思いつきが発生するかもしれないが、そういう次元の話ではない。そもそも素養がないところにそんなものを導入するのは、異常な量の教育コストがかかってしまい、現実的ではない絵空事になってしまう。そもそも筆者は下っ端である。</p>
+<p>CLIを触ったことも、バージョン管理の思想に触れたこともないような人に、高度に発達した魔法のような文明の利器について教え、使わせ、管理し、アカウントセキュリティを含めたHousekeepingを行うリソースは膨大である。これを他部署間でお金をかけてやる、ということができるのは、牛が球体であったり、空気抵抗がゼロであったりするHypotheticalな環境である。少なくとも現状にはそぐわない。</p>
+<p>ではリーガルテック分野にはそうしたものがないか。法務分野の類似ツールとしてはHubbleという「法務向けGitHub」みたいなツールがある。これを導入すればいいのでは？</p>
+<p><strong>これは短期では実現が難しいので、中長期的な目標にする。</strong></p>
+<p>たとえ非エンジニアでも使いやすいとしても、それの手前にはツール導入というのはお金の問題がある。IT企業でも簡単ではないところに、非エンジニア「しか」いない環境におけるITツールの導入というのは、OSI参照モデル第8層以上でのとんでもない量の調整と問題解決が必要になってしまう。そもそも筆者は権限がほぼない下っ端なのである。</p>
+<h3 id="サイゼリアのステップワイズなdx">サイゼリアのステップワイズなDX</h3>
+<p>この件についてはサイゼリアのオーダーシステムの電子化をお手本にしたい。あれはまず品目番号を核として、紙の注文票→店員のiPod Touchという流れでスタートして、客と店のオーガニックなシステムを「調教」したことによって成功している。長期的には次のステップを見据えて、店員用のUIを流用して客のスマホで番号を入れさせる、というステップワイズな進め方をしていた。これは大いに参考になる。</p>
+<p>それぞれの階段の高さを最小限にすることで破綻を起こさずに徐々に変革を進め、長期的な戦略で全体的なコスト（ハード、開発、クレーム対応、全体の人件費）を下げるというのは、持たざるもののDXな気がする。</p>
+<p>目の前の問題を解決するには、思想をそのままに、今あるツールセットと工夫で実装するのが最も早く、障害もなく、それでいて専用ツールがもたらす70%くらいの幸せをもたらすことができる…はずである。</p>
+<p>加えて、サイゼリアをお手本にするなら、今のワークフローを徐々にGitHubに思想レベルで寄せていくことで、将来的にGitHubそのものやHubbleなどの思想が近いツール導入のための土を作り、そうした種が芽吹くかもしれない状況を作ることができる。</p>
+<h2 id="思想をそのままに今ある手札でワークフローを改善すること">思想をそのままに、今ある手札でワークフローを改善すること</h2>
+<p>まずは課題として下記を設定する。</p>
+<ol>
+<li>Issueの数が膨大であること</li>
+<li>Wordのコメントとかいう進捗管理機能もなく、他ツールとの連携も人力コピペおじさんがいないと実現できない機能への依存</li>
+</ol>
+<p>そして解決に至る道として下記を条件とする。</p>
+<ul>
+<li>その解決を他のMS365ツールでできる範囲内で行う</li>
+<li>他部署業務フローには最小限の変更と負担とする
+<ul>
+<li>教育コスト・調整コストの低減</li>
+</ul>
+</li>
+<li>新規ツール導入はなし
+<ul>
+<li>金銭的・調整コストを考慮したくない</li>
+</ul>
+</li>
+</ul>
+<p>こねくり回したうえで、概ね、下記のような流れを想定すればいけそうな感じになった。</p>
+<ol>
+<li>法務にExcelでコメントの一覧を作ってもらう（Issueの自動化対応のためのデータ整形）</li>
+<li>ExcelからPlannerへPower Automateで移行（Issueのステータストラッキング）</li>
+<li>PlannerタスクをベースにTeamsで議論して方向性を定める（Issueコメントの機能）</li>
+<li>議論の結果をクリーンに反映し、Pull Request相当のファイルとして分離する（修正案の実装）</li>
+<li>それについて法務とMTGやTeamsで議論する（Pull Requestのコメント）</li>
+</ol>
+<h3 id="1-コメントのexcel化">1. コメントのExcel化</h3>
+<p>これはまずエキスパート部署からExcelでももらうことで、ちょっと楽をする。</p>
+<p>当初の構想ではPower Automateを使用することで、Planner等の進捗管理ツールに移行させることを考えたが、WordのコメントをPower Automateで抽出するのはかなり大変そうなので、最初からExcelにしてもらう。この負担はエキスパート部署に飲んでもらう。</p>
+<p>下流フローや社外環境のことを考えて、Wordファイルへのコメントも入れてもらうかどうかは要検討。</p>
+<h3 id="2-plannerタスクへの転記">2. Plannerタスクへの転記</h3>
+<p>その上でExcel上のコメントを機械さんが読めるデータとしてPower Automateに食わせてPlannerタスクに転記する。</p>
+<p>またもし1.でExcel化が難しければ、コメント機能ではなくて、文中にコメントタグの運用を徹底（e.g. 【法務コメント】みたいなタグ）してIn-lineなコメントにしてもらって、そこからPower Automateで抽出をかけて、Plannerに転記する、ということもできるはず…多分。筆者はコードが書けないが、多分機械さんとしてもやりやすいはず。Validationのことはとりあえず考えないことにする。</p>
+<p>ここでタスクごとに必要部署の担当者をアサインして、デッドライン、進捗、ステータスを管理する。</p>
+<h3 id="3-plannerタスクと議論">3. Plannerタスクと議論</h3>
+<p>Issueは立てたあと、コミュニティ・ステークホルダーとの議論がある。これは契約書でも同じである。
+指摘の入った箇所について、必要に応じてTeamsチャンネルや他のコミュニケーションツールを通して議論する。
+このときにそれぞれの議論が相互に見えつつ、一つの論点ごとに集中できるような可視化のコントロールができると良い。Teamsのスレッド機能が適任なように思われる。親ポストにPlannerタスクのリンクを貼っておけば良い。</p>
+<h3 id="4-変更の実装">4. 変更の実装</h3>
+<p>議論の結果取りまとめられたそれぞれのステークホルダーの意向が明らかになったら、交渉のための実装が始まる。
+これはクリーン版に新たに変更点を追記していく形で行う。</p>
+<p>ここで作業ファイルを分けることで、Issue階層の議論とPull Requestのレビューコメントの層をファイルレベルで分離し、関わる部署をエキスパート部署と自分に制限して無理やり人間が取り扱える規模の情報量に落とす。</p>
+<p>おそらくここで作業ファイルと見えている情報をワークフローの前後で分離することで、擬似的に棲み分けができるだろう、という算段である。</p>
+<p>この作業ファイルは原則としてエキスパート部署と締結先のみとやり取りをするので、純粋に契約書言語の方向性のみに集中した議論をする。</p>
+<h3 id="5それについて法務とmtgやteamsで議論する">5.それについて法務とMTGやTeamsで議論する</h3>
+<p>最後はこれである。エキスパート部署とのみ4.のファイルを触るので、その議論についても数名で実施すれば終わる。
+小さくTeamsチャットや、IRLのMTG等で詰めていくことができるだろう。</p>
+        </div>
+        <a href="/posts/ms365%E7%92%B0%E5%A2%83%E3%81%A7%E3%81%AEpoor-mans-github%E3%82%92%E6%B3%95%E5%8B%99%E6%A5%AD%E5%8B%99%E3%81%AB/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/posts/my-first-post/" class="color-inherit dim link">
             My First Post
             </a>
@@ -139,255 +307,20 @@
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/the-idolm@ster-m@sters-of-idol-world-2023/" class="color-inherit dim link">
-            THE IDOLM@STER M@STERS OF IDOL WORLD!!!!! 2023
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>アイドルマスターを追いかけ始めてそろそろ11年目に差し掛かろうというオタクが、2015年にM@STERS OF IDOL WORLD 2015に参加しないことを8年後悔したあと、アイマス5ブランドを広く浅く履修しまくって、コロナで乾いた時期を超えて参加した初めてのアイドルマスター合同ライブ。消えかえた記憶を固定しておくために出力しておくとりとめのない話。
-何ならアイマス含めて「キャラクター」に真剣に生き、それが高じて本業としてのフィギュアメーカー社員というキャリアすら進んでいる「中の人に近いファン」というポジションに来てしまった28歳男性の話。</p>
-<h1 id="day1">DAY1</h1>
-<table>
-  <thead>
-      <tr>
-          <th>No.</th>
-          <th>楽曲</th>
-          <th>演者</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>1</td>
-          <td><a href="https://imas-db.jp/song/detail/10.html">THE IDOLM@STER</a> (ブランド：765AS)</td>
-          <td>765PRO ALLSTARS</td>
-      </tr>
-      <tr>
-          <td>2</td>
-          <td><a href="https://imas-db.jp/song/detail/472.html">Shine!!</a> (ブランド：シンデレラ)</td>
-          <td>シンデレラガールズ</td>
-      </tr>
-      <tr>
-          <td>3</td>
-          <td>Glow Map (ブランド：ミリオン)</td>
-          <td>ミリオンライブ！</td>
-      </tr>
-      <tr>
-          <td>4</td>
-          <td><a href="https://imas-db.jp/song/detail/456.html">DRIVE A LIVE</a> (ブランド：SideM)</td>
-          <td>SideM</td>
-      </tr>
-      <tr>
-          <td>5</td>
-          <td>Resonance⁺ (ブランド：シャニ)</td>
-          <td>シャイニーカラーズ</td>
-      </tr>
-      <tr>
-          <td>6</td>
-          <td>ビーチブレイバー (ブランド：シャニ)</td>
-          <td>放課後クライマックスガールズ (河野ひより, 白石晴香, 永井真里子, 丸岡和佳奈, 涼本あきほ)  <!-- raw HTML omitted -->+ 沼倉愛美, 東山奈央, 黒沢ともよ, 堀江瞬, 高塚智人</td>
-      </tr>
-      <tr>
-          <td>7</td>
-          <td>ドレミファクトリー！ (ブランド：シンデレラ)</td>
-          <td>U149 第3芸能課 (今井麻夏, 黒沢ともよ, 集貝はな)  <!-- raw HTML omitted -->+ 仁後真耶子, 下田麻美, 稲川英里, 原嶋あかり, 渡部恵子, 矢野奨吾, 古畑恵介, 河野ひより</td>
-      </tr>
-      <tr>
-          <td>8</td>
-          <td>はるかぜバトン (ブランド：SideM)</td>
-          <td>もふもふえん (矢野奨吾, 古畑恵介)  <!-- raw HTML omitted -->+ Cleasky (角元明日香, 桐谷蝶々)</td>
-      </tr>
-      <tr>
-          <td>9</td>
-          <td><a href="https://imas-db.jp/song/detail/43.html">shiny smile</a> (ブランド：765AS)</td>
-          <td>Cleasky (角元明日香, 桐谷蝶々),  <!-- raw HTML omitted -->ノクチル (和久井優, 土屋李央, 田嶌紗蘭, 岡咲美保)</td>
-      </tr>
-      <tr>
-          <td>10</td>
-          <td>夏時間グラフィティ (ブランド：SideM)</td>
-          <td>ストロベリーポップムーン (山崎はるか, 田所あずさ, Machico),  <!-- raw HTML omitted -->放課後クライマックスガールズ (河野ひより, 白石晴香, 永井真里子, 丸岡和佳奈, 涼本あきほ)</td>
-      </tr>
-      <tr>
-          <td>11</td>
-          <td>Reason!! (ブランド：SideM)</td>
-          <td>765PRO ALLSTARS</td>
-      </tr>
-      <tr>
-          <td>12</td>
-          <td>虹色letters (ブランド：ミリオン)</td>
-          <td>Cleasky (角元明日香, 桐谷蝶々)  <!-- raw HTML omitted -->+ 白石晴香, 田嶌紗蘭</td>
-      </tr>
-      <tr>
-          <td>13</td>
-          <td>僕らだけの未来の空 (ブランド：シャニ)</td>
-          <td>ノクチル (和久井優, 土屋李央, 田嶌紗蘭, 岡咲美保)  <!-- raw HTML omitted -->+ Triad Primus (福原綾香, 松井恵理子, 渕上舞)</td>
-      </tr>
-      <tr>
-          <td>14</td>
-          <td><a href="https://imas-db.jp/song/detail/523.html">秘密のメモリーズ</a> (ブランド：ミリオン)</td>
-          <td>浅倉杏美, 平田宏美, 松井恵理子, 渕上舞, 永井真里子, 涼本あきほ</td>
-      </tr>
-      <tr>
-          <td>15</td>
-          <td>Arrive You 〜それが運命でも〜 (ブランド：ミリオン)</td>
-          <td>TIntMe! (稲川英里, 原嶋あかり, 渡部恵子)  <!-- raw HTML omitted -->+ U149 第3芸能課 (今井麻夏, 黒沢ともよ, 集貝はな)</td>
-      </tr>
-      <tr>
-          <td>16</td>
-          <td>百花は月下に散りぬるを (ブランド：ミリオン)</td>
-          <td>花咲夜 (郁原ゆう, 南早紀, 小岩井ことり)  <!-- raw HTML omitted -->+ 花井美春, 丸岡和佳奈</td>
-      </tr>
-      <tr>
-          <td>17</td>
-          <td>Gaze and Gaze (ブランド：シンデレラ)</td>
-          <td>フォーリンシーサイド (東山奈央, 花井美春)  <!-- raw HTML omitted -->+ 和久井優, 土屋李央</td>
-      </tr>
-      <tr>
-          <td>18</td>
-          <td><a href="https://imas-db.jp/song/detail/8.html">エージェント夜を往く</a> (ブランド：765AS)</td>
-          <td>SideM</td>
-      </tr>
-      <tr>
-          <td>19</td>
-          <td><a href="https://imas-db.jp/song/detail/19.html">GO MY WAY!!</a> (ブランド：765AS)</td>
-          <td>中村繪里子, 寺島拓篤</td>
-      </tr>
-      <tr>
-          <td>20</td>
-          <td><a href="https://imas-db.jp/song/detail/478.html">JOKER➚オールマイティ</a> (ブランド：SideM)</td>
-          <td>長島光那, 涼本あきほ, 若林直美, 幸村恵理</td>
-      </tr>
-      <tr>
-          <td>21</td>
-          <td><a href="https://imas-db.jp/song/detail/175.html">I&rsquo;m so free!</a> (ブランド：765AS)</td>
-          <td>長谷川明子, Machico, 和久井優, 岡咲美保</td>
-      </tr>
-      <tr>
-          <td>22</td>
-          <td><a href="https://imas-db.jp/song/detail/156.html">ラ♥︎ブ♥︎リ♥︎</a> (ブランド：765AS)</td>
-          <td>釘宮理恵, 松井恵理子, 南早紀, 土屋李央</td>
-      </tr>
-      <tr>
-          <td>23</td>
-          <td>Get lol! Get lol! SONG (ブランド：ミリオン)</td>
-          <td>仁後真耶子, 堀江瞬</td>
-      </tr>
-      <tr>
-          <td>24</td>
-          <td>絶対正義 EVERY DAY (ブランド：シャニ)</td>
-          <td>河野ひより, 稲川英里, 仲村宗悟</td>
-      </tr>
-      <tr>
-          <td>25</td>
-          <td>スパイスパラダイス (ブランド：シンデレラ)</td>
-          <td>寺島拓篤, 河野ひより, 白石晴香, 永井真里子, 丸岡和佳奈, 涼本あきほ, 田中有紀</td>
-      </tr>
-      <tr>
-          <td>26</td>
-          <td>Let&rsquo;s get a chance (ブランド：シャニ)</td>
-          <td>ミリオンライブ！</td>
-      </tr>
-      <tr>
-          <td>27</td>
-          <td>ABSOLUTE RUN!!! (ブランド：ミリオン)</td>
-          <td>ストロベリーポップムーン (山崎はるか, 田所あずさ, Machico)  <!-- raw HTML omitted -->+ 白石晴香, 丸岡和佳奈, 田嶌紗蘭, 岡咲美保</td>
-      </tr>
-      <tr>
-          <td>28</td>
-          <td><a href="https://imas-db.jp/song/detail/457.html">BRAND NEW FIELD</a> (ブランド：SideM)</td>
-          <td>Jupiter (寺島拓篤, 神原大地)  <!-- raw HTML omitted -->+ 長谷川明子, 沼倉愛美</td>
-      </tr>
-      <tr>
-          <td>29</td>
-          <td>Dye the sky. (ブランド：シャニ)</td>
-          <td>今井麻美, 福原綾香, 田所あずさ</td>
-      </tr>
-      <tr>
-          <td>30</td>
-          <td><a href="https://imas-db.jp/song/detail/496.html">流れ星キセキ</a> (ブランド：シンデレラ)</td>
-          <td>中村繪里子, 山崎はるか, 仲村宗悟</td>
-      </tr>
-      <tr>
-          <td>31</td>
-          <td>ハイファイ☆デイズ (ブランド：シンデレラ)</td>
-          <td>シャイニーカラーズ</td>
-      </tr>
-      <tr>
-          <td>32</td>
-          <td>True Horizon (ブランド：SideM)</td>
-          <td>仲村宗悟, 寺島拓篤, 伊瀬結陸</td>
-      </tr>
-      <tr>
-          <td>33</td>
-          <td>FairyTaleじゃいられない (ブランド：ミリオン)</td>
-          <td>シンデレラガールズ</td>
-      </tr>
-      <tr>
-          <td>34</td>
-          <td>We&rsquo;re the one (ブランド：SideM)</td>
-          <td>C.FIRST (伊瀬結陸, 宮﨑雅也, 大塚剛央)  <!-- raw HTML omitted -->+ 平田宏美, 北原沙弥香, 和久井優</td>
-      </tr>
-      <tr>
-          <td>35</td>
-          <td>Transcending The World (ブランド：シャニ)</td>
-          <td>ストレイライト (田中有紀, 幸村恵理, 北原沙弥香)  <!-- raw HTML omitted -->+ 長島光那, 田辺留依, 仲村宗悟, 寺島拓篤, 神原大地</td>
-      </tr>
-      <tr>
-          <td>36</td>
-          <td>Needle Light (ブランド：シンデレラ)</td>
-          <td>サイバーグラス (長島光那, 田辺留依)  <!-- raw HTML omitted -->+ 若林直美</td>
-      </tr>
-      <tr>
-          <td>37</td>
-          <td>Platinum MASK (ブランド：SideM)</td>
-          <td>Beit (堀江瞬, 高塚智人)  <!-- raw HTML omitted -->+ 千菅春香, 桜咲千依, 郁原ゆう, 小岩井ことり</td>
-      </tr>
-      <tr>
-          <td>38</td>
-          <td>アンデッド・ダンスロック (ブランド：シンデレラ)</td>
-          <td>エルドリッチ・ロアテラー (千菅春香, 桜咲千依)  <!-- raw HTML omitted -->+ 浅倉杏美, 平田宏美</td>
-      </tr>
-      <tr>
-          <td>39</td>
-          <td><a href="https://imas-db.jp/song/detail/555.html">Tulip</a> (ブランド：シンデレラ)</td>
-          <td>神原大地, 堀江瞬, 高塚智人, 矢野奨吾, 古畑恵介, 宮﨑雅也, 大塚剛央</td>
-      </tr>
-      <tr>
-          <td>40</td>
-          <td><a href="https://imas-db.jp/song/detail/493.html">Trancing Pulse</a> (ブランド：シンデレラ)</td>
-          <td>Triad Primus (福原綾香, 松井恵理子, 渕上舞)  <!-- raw HTML omitted -->+ C.FIRST (伊瀬結陸, 宮﨑雅也, 大塚剛央),  <!-- raw HTML omitted -->ストレイライト (田中有紀, 幸村恵理, 北原沙弥香)</td>
-      </tr>
-      <tr>
-          <td>41</td>
-          <td>CRYST@LOUD (ブランド：IMAS)</td>
-          <td>全員</td>
-      </tr>
-      <tr>
-          <td>42</td>
-          <td><a href="https://imas-db.jp/song/detail/470.html">アイ MUST GO!</a> (ブランド：IMAS)</td>
-          <td>全員 (※白石晴香を除く)</td>
-      </tr>
-  </tbody>
-</table>
-<p>(*) 19-25曲目は「みんな元気!!!!!」メドレー, 42曲目はアンコール</p>
-        </div>
-        <a href="/posts/the-idolm@ster-m@sters-of-idol-world-2023/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
+      
+        <section class="w-100">
+          <h1 class="f3">More</h1>
+          
+          
+            <h2 class="f5 fw4 mb4 dib mr3">
+              <a href="/posts/the-idolm@ster-m@sters-of-idol-world-2023/" class="link black dim">
+                THE IDOLM@STER M@STERS OF IDOL WORLD!!!!! 2023
+              </a>
+            </h2>
+          
+        </section>
       
 
     </div>
@@ -396,7 +329,7 @@
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://example.org/" >
     &copy;  My New Hugo Site 2025 
   </a>
     <div><div class="ananke-socials"></div>
