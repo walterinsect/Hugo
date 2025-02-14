@@ -1,4 +1,4 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'ja-JP'
+title = '極度乾燥しなさい3.0'
 theme = ["github.com/theNewDynamic/gohugo-theme-ananke/v2"]
