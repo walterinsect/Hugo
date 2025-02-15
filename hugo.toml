@@ -1,4 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'ja-JP'
 title = '極度乾燥しなさい3.0'
-theme = ["github.com/theNewDynamic/gohugo-theme-ananke/v2"]
+[module]
+  [[module.imports]]
+    path = "github.com/nanxiaobei/hugo-paper"
