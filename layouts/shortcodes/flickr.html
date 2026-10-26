@@ -1,0 +1,13 @@
+{{- /* 使い方: {{< flickr url="https://www.flickr.com/photos/walterinsect/…/" caption="…" >}} */ -}}
+{{- $photo := partialCached "flickr-oembed.html" (dict "url" (.Get "url") "src" (.Get "src")) (.Get "url") -}}
+{{- $caption := .Get "caption" | default $photo.title -}}
+<figure>
+  <a href="{{ $photo.page }}" target="_blank" rel="noopener">
+    {{- if $photo.src }}
+    <img src="{{ $photo.src }}" alt="{{ $caption }}" loading="lazy"{{ with $photo.width }} width="{{ . }}"{{ end }}{{ with $photo.height }} height="{{ . }}"{{ end }}>
+    {{- else }}{{ $caption | default "Flickr で見る" }}{{ end -}}
+  </a>
+  {{- with $caption }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>

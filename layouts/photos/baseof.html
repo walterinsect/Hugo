@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default site.Language.Lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsSection }}{{ .Title }}{{ else }}{{ .Title }} | Photos{{ end }} | {{ site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{- $css := resources.Get "css/photos.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  </head>
+  <body class="photos">
+    <header class="photos-header">
+      <a class="photos-brand" href="{{ "photos/" | relURL }}">Photos</a>
+      <nav>
+        {{- range site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+        {{- end }}
+        {{- with site.Params.flickr }}
+        <a href="{{ . }}" target="_blank" rel="noopener">Flickr</a>
+        {{- end }}
+      </nav>
+    </header>
+    <main>
+      {{- block "main" . }}{{ end }}
+    </main>
+    <footer class="photos-footer">
+      <p>Photos hosted on <a href="{{ site.Params.flickr | default "https://www.flickr.com/" }}" target="_blank" rel="noopener">Flickr</a> · <a href="{{ "/" | relURL }}">{{ site.Title }}</a></p>
+    </footer>
+  </body>
+</html>

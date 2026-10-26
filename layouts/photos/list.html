@@ -1,0 +1,20 @@
+{{- define "main" -}}
+<h1>{{ .Title }}</h1>
+{{- with .Content }}<div class="photos-intro">{{ . }}</div>{{ end }}
+
+<div class="album-grid">
+  {{- range .Pages.ByDate.Reverse }}
+  {{- $coverURL := .Params.cover | default (index (.Params.photos | default slice) 0).url -}}
+  <a class="album-card" href="{{ .RelPermalink }}">
+    {{- with $coverURL }}
+    {{- $cover := partialCached "flickr-oembed.html" (dict "url" .) . }}
+    {{- with $cover.src }}
+    <img src="{{ . }}" alt="" loading="lazy"{{ with $cover.width }} width="{{ . }}"{{ end }}{{ with $cover.height }} height="{{ . }}"{{ end }}>
+    {{- end }}
+    {{- end }}
+    <span class="album-title">{{ .Title }}</span>
+    <span class="album-meta">{{ .Date.Format "2006.01.02" }} · {{ len (.Params.photos | default slice) }} photos</span>
+  </a>
+  {{- end }}
+</div>
+{{- end -}}

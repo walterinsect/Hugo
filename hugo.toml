@@ -7,6 +7,21 @@ title = '極度乾燥しなさい3.0'
   [[module.imports]]
     path = "github.com/nanxiaobei/hugo-paper"
 
+[params]
+  # トップページの記事一覧にはブログ記事だけを出す
+  mainSections = ['posts']
+  flickr = 'https://www.flickr.com/photos/walterinsect/'
+
+[menus]
+  [[menus.main]]
+    name = 'Blog'
+    pageRef = '/posts'
+    weight = 10
+  [[menus.main]]
+    name = 'Photos'
+    pageRef = '/photos'
+    weight = 20
+
 # 記事中の <br> などの HTML をそのまま出力する
 [markup.goldmark.renderer]
   unsafe = true
