@@ -1,0 +1,24 @@
+{{- /*
+  Flickr の写真ページの URL から、oEmbed で画像の情報を取得して返す。
+  引数: dict "url" (写真ページ) "src" (任意。取得できないときに使う画像 URL)
+  戻り値: dict "page" "src" "width" "height" "title"
+*/ -}}
+{{- $page := replaceRE `/in/.*$` "/" .url -}}
+{{- $result := dict "page" $page "src" (.src | default "") "width" 0 "height" 0 "title" "" -}}
+{{- $endpoint := printf "https://www.flickr.com/services/oembed/?format=json&maxwidth=1600&url=%s" ($page | urlquery) -}}
+{{- with try (resources.GetRemote $endpoint) -}}
+  {{- with .Err -}}
+    {{- warnf "flickr: %s の取得に失敗しました: %s" $page . -}}
+  {{- else with .Value -}}
+    {{- $data := . | transform.Unmarshal -}}
+    {{- $result = merge $result (dict
+      "src" ($result.src | default $data.url)
+      "width" $data.width
+      "height" $data.height
+      "title" $data.title
+    ) -}}
+  {{- else -}}
+    {{- warnf "flickr: %s の情報が見つかりません" $page -}}
+  {{- end -}}
+{{- end -}}
+{{- return $result -}}
