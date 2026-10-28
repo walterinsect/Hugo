@@ -10,6 +10,12 @@ title = '極度乾燥しなさい3.0'
 [params]
   # トップページの記事一覧にはブログ記事だけを出す
   mainSections = ['posts']
+  # トップページのプロフィール
+  name = 'walterinsect'
+  # 空にするとテーマ既定の「A personal blog by …」が出るので、空白 1 文字で名前だけにする
+  bio = ' '
+  # ヘッダーの SNS アイコン（X）
+  twitter = 'walterinsect'
   flickr = 'https://www.flickr.com/photos/walterinsect/'
 
 [menus]
@@ -17,6 +23,10 @@ title = '極度乾燥しなさい3.0'
     name = 'Blog'
     pageRef = '/posts'
     weight = 10
+  [[menus.main]]
+    name = 'Tags'
+    pageRef = '/tags'
+    weight = 15
   [[menus.main]]
     name = 'Photos'
     pageRef = '/photos'

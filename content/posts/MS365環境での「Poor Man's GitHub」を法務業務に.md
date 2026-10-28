@@ -2,6 +2,7 @@
 date = '2025-02-14T23:46:41+09:00'
 draft = false
 title = 'MS365環境での「Poor Mans GitHub」を法務業務に'
+tags = ['GitHub', '法務', 'DX', 'Microsoft 365']
 +++
 
 # MS365環境での「Poor Man's GitHub」を法務業務に

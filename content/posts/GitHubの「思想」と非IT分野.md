@@ -2,6 +2,7 @@
 date = '2025-02-14T23:46:41+09:00'
 draft = false
 title = 'GitHubの「思想」と非IT分野'
+tags = ['GitHub', '法務', 'DX']
 +++
 
 
