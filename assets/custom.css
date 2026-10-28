@@ -1,0 +1,69 @@
+/* テーマの main.css の後ろに連結される。Tailwind の記法は使えないので普通の CSS で書く */
+
+:root {
+  --font-accent: "Shippori Mincho B1", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --rule: rgb(0 0 0 / 14%);
+}
+.dark {
+  --rule: rgb(255 255 255 / 18%);
+}
+
+/* ヘッダー：サイト名を明朝の太字に、メニューは字間を広げて控えめに */
+/* テーマの .font-medium が強い指定なので !important で上書きする */
+body > header > div:first-child > a {
+  font-family: var(--font-accent);
+  font-weight: 800 !important;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+}
+body > header nav a {
+  font-family: var(--font-accent);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+/* 見出し：明朝の太字で本文（ゴシック）との差をはっきりさせる
+   テーマの .prose はかなり強い指定なので、大きさや罫線は !important で上書きする */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: var(--font-accent);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.prose h3,
+.prose h4 {
+  font-weight: 700;
+}
+.prose h1 {
+  font-size: 2.1em !important;
+  line-height: 1.35 !important;
+}
+/* 記事中の h2 には紙の罫線のような細い下線を引く */
+.prose section h2 {
+  padding-bottom: 0.3em !important;
+  border-bottom: 1px solid var(--rule) !important;
+}
+
+/* トップページの名前 */
+main .text-2xl.font-medium {
+  font-family: var(--font-accent);
+  font-weight: 800 !important;
+  letter-spacing: 0.04em;
+}
+
+/* フッター：明朝で字間を広げ、上に細い罫線 */
+body > footer {
+  font-family: var(--font-accent);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  border-top: 1px solid var(--rule);
+}
+
+/* スマートフォンでは記事タイトルを少し小さく */
+@media (max-width: 640px) {
+  .prose h1 {
+    font-size: 1.65em !important;
+  }
+}

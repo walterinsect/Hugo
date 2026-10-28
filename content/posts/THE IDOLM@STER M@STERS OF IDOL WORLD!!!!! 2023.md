@@ -2,6 +2,7 @@
 date = '2025-02-14T21:17:41+09:00'
 draft = false
 title = 'THE IDOLM@STER M@STERS OF IDOL WORLD!!!!! 2023'
+tags = ['アイドルマスター', 'ライブ']
 +++
 
 
