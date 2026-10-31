@@ -1,8 +1,8 @@
 ---
-categories:
-- 駄文-ja
-date: 2018-09-16
-title: The Changes of Historiographical Debate Regarding Finnish-Soviet Wars Between 1945 and Today
+title: "The Changes of Historiographical Debate Regarding Finnish-Soviet Wars Between 1945 and Today"
+date: 2018-09-16T02:37:04+02:00
+url: "/2018/09/16/the-changes-of-historiographical-debate-regarding-finnish-soviet-wars-between-1945-and-today/"
+tags: ["駄文"]
 ---
 
 卒論を上げるのを忘れていたので上げてみる。黒歴史確定ではあるんだけども。ものは英語なので和文抄訳だけ記事にコピー。読みたい暇人はダウンロードすればいいんじゃないかな。

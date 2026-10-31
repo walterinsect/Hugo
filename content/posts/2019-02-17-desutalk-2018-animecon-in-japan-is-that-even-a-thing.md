@@ -1,6 +1,7 @@
 ---
-date: 2019-02-17
 title: "DesuTalk 2018: Animecon in Japan - Is That Even a Thing?"
+date: 2019-02-17T10:51:24+02:00
+url: "/2019/02/17/desutalk-2018-animecon-in-japan-is-that-even-a-thing/"
 ---
 
 忘れていたので上げておく。去年の秋にやったDesuTalkでのプレゼン。アニメコン運営がやってるTEDTalk的なイベントでした。200人位いたのかな。アイドルアニメとか漫画史などの面白そうなプレゼン（フィンランド語）と合わせて発表さしてもらいました。

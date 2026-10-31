@@ -1,8 +1,8 @@
 ---
-categories:
-- 駄文-ja
-date: 2017-12-11
-title: Noken Test Opposition Movement and Hostility in International Christian University
+title: "Noken Test Opposition Movement and Hostility in International Christian University"
+date: 2017-12-11T03:43:28+03:00
+url: "/2017/12/11/noken-test-opposition-movement-and-hostility-in-international-christian-university-2/"
+tags: ["駄文"]
 ---
 
 [Noken Test Opposition Movement and Hostility in International Christian University](http://walterinsect.files.wordpress.com/2017/12/noken.pdf)

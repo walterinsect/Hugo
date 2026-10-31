@@ -1,10 +1,8 @@
 ---
-categories:
-- uncategorized-en
-date: 2020-02-21
-date created: "2025-02-16, 02:26:14"
-date modified: "2025-02-17, 23:17:23"
-title: Archiving city Project - Part 1
+title: "Archiving city Project - Part 1"
+date: 2020-02-21T02:35:13+02:00
+url: "/en/2020/02/21/archiving-city-project-part-1/"
+htmlLang: en
 ---
 
 This is one of the assignments done for the course *"Interrogating the Archive: Preserving and Interpreting Knowledges of the Past"* I took during my Master's. It kinda serves as a trivia of Helsinki's city, and a travel guide for history nerds looking for off-the-beaten-track ways to look at Helsinki. And one of the most enjoyable assignment I did during the 2 years.
@@ -21,7 +19,7 @@ Although Helsinki is deep behind the actual frontlines in WWII, the destruction 
 
 <figure>
 
-![](../2020-02-21-archiving-city-project-part-1/65c2f6730e605255807e63e7cf3b6eb27b18bb79.jpg)
+![](65c2f6730e605255807e63e7cf3b6eb27b18bb79.jpg)
 
 <figcaption>
 
@@ -37,7 +35,7 @@ For me, first encounter with the air raid was this very foundation of our univer
 
 - <figure>
 
-  ![](../2020-02-21-archiving-city-project-part-1/cb8abd7b91aa6dbe8f9d12d0836f54a6eb2f87a7.jpg)
+  ![](cb8abd7b91aa6dbe8f9d12d0836f54a6eb2f87a7.jpg)
 
   <figcaption>
 
@@ -49,7 +47,7 @@ For me, first encounter with the air raid was this very foundation of our univer
 
 - <figure>
 
-  ![](../2020-02-21-archiving-city-project-part-1/6a6dcd0ada54d2b1421f744a68922316e3e98e47.jpg)
+  ![](6a6dcd0ada54d2b1421f744a68922316e3e98e47.jpg)
 
   <figcaption>
 
@@ -65,7 +63,7 @@ Few hundred meters south of Metsatalo is the heart of the Finnish governments. I
 
 <figure>
 
-![](../2020-02-21-archiving-city-project-part-1/280dbef0a1491701cc5659d3d01141f84fa327ba.jpg)
+![](280dbef0a1491701cc5659d3d01141f84fa327ba.jpg)
 
 <figcaption>
 
@@ -87,7 +85,7 @@ As we studied, there are past that is difficult to tell. Savolainen's paper real
 
 - <figure>
 
-  ![](../2020-02-21-archiving-city-project-part-1/24e75a779d94aadb3bd4e6deb444748991aa43fa.jpg)
+  ![](24e75a779d94aadb3bd4e6deb444748991aa43fa.jpg)
 
   <figcaption>
 
@@ -99,7 +97,7 @@ As we studied, there are past that is difficult to tell. Savolainen's paper real
 
 - <figure>
 
-  ![](../2020-02-21-archiving-city-project-part-1/4d63e43ae1bb68c61aaa24104261748dbff9ef9e.jpg)
+  ![](4d63e43ae1bb68c61aaa24104261748dbff9ef9e.jpg)
 
   <figcaption>
 
@@ -121,7 +119,7 @@ Right next to the Central Railway station building on the western side has a fan
 
 <figure>
 
-![](../2020-02-21-archiving-city-project-part-1/205849835d6110953426ce0ca7f06fb978a8b241.jpg)
+![](205849835d6110953426ce0ca7f06fb978a8b241.jpg)
 
 <figcaption>
 
@@ -137,7 +135,7 @@ The construction year of the memorial, 2000, shows the change in tellability aro
 
 <figure>
 
-![](../2020-02-21-archiving-city-project-part-1/597e688c56b22c62dd1e3a7549e91a0b5c80c744.jpg)
+![](597e688c56b22c62dd1e3a7549e91a0b5c80c744.jpg)
 
 <figcaption>
 
@@ -153,7 +151,7 @@ The building simultaneously represents both the heroic acts of the patriots for 
 
 <figure>
 
-![](../2020-02-21-archiving-city-project-part-1/edda2ab631a3b7836dc754ed7f56479e84a19a5b.jpg)
+![](edda2ab631a3b7836dc754ed7f56479e84a19a5b.jpg)
 
 <figcaption>
 
@@ -169,7 +167,7 @@ This is quite prominent memorial sitting on Pohjoinen Hesperiankatu 15, north of
 
 - <figure>
 
-  ![](../2020-02-21-archiving-city-project-part-1/b649f10c9ece2fe5420fd0cb6463ce3b9ce0c9b8.png)
+  ![](b649f10c9ece2fe5420fd0cb6463ce3b9ce0c9b8.png)
 
   <figcaption>
 
@@ -181,7 +179,7 @@ This is quite prominent memorial sitting on Pohjoinen Hesperiankatu 15, north of
 
 - <figure>
 
-  ![](../2020-02-21-archiving-city-project-part-1/96df038f10560010d62f998850856894209bee00.png)
+  ![](96df038f10560010d62f998850856894209bee00.png)
 
   <figcaption>
 

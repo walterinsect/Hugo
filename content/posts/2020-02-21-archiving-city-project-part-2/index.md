@@ -1,10 +1,8 @@
 ---
-categories:
-- uncategorized-en
-date: 2020-02-21
-date created: "2025-02-16, 02:26:14"
-date modified: "2025-02-17, 23:17:24"
-title: Archiving City Project - Part 2
+title: "Archiving City Project - Part 2"
+date: 2020-02-21T02:35:27+02:00
+url: "/en/2020/02/21/archiving-city-project-part-2/"
+htmlLang: en
 ---
 
 Part 2 of the Archiving the City Project, which is about Landscape forgotten, but embedded in the cityscape through monuments.
@@ -19,7 +17,7 @@ Often landscape is a product of certain historical forces and authority, but the
 
 - <figure>
 
-  ![](../2020-02-21-archiving-city-project-part-2/f6791b98969bc2d674b816513392a0dc6226a5c9.jpg)
+  ![](f6791b98969bc2d674b816513392a0dc6226a5c9.jpg)
 
   <figcaption>
 
@@ -31,7 +29,7 @@ Often landscape is a product of certain historical forces and authority, but the
 
 - <figure>
 
-  ![](../2020-02-21-archiving-city-project-part-2/4a5993c20c58d8a030ca679c74254ea660b60eb8.jpg)
+  ![](4a5993c20c58d8a030ca679c74254ea660b60eb8.jpg)
 
   <figcaption>
 
@@ -43,7 +41,7 @@ Often landscape is a product of certain historical forces and authority, but the
 
 - <figure>
 
-  ![](../2020-02-21-archiving-city-project-part-2/7f8e0c003037dceb36eada15f4c63df74dfd579c.jpg)
+  ![](7f8e0c003037dceb36eada15f4c63df74dfd579c.jpg)
 
   <figcaption>
 
@@ -55,7 +53,7 @@ Often landscape is a product of certain historical forces and authority, but the
 
 - <figure>
 
-  ![](../2020-02-21-archiving-city-project-part-2/657dae8aa22e1a67aa0060bbbb51e36e94820eef.jpg)
+  ![](657dae8aa22e1a67aa0060bbbb51e36e94820eef.jpg)
 
   <figcaption>
 
@@ -75,7 +73,7 @@ The current Myllypuro area has triple layer of landscape, a home to immigrant fa
 
 <figure>
 
-![](../2020-02-21-archiving-city-project-part-2/d605eca0f9a602324611f50aee867d3da0c56e2d.jpg)
+![](d605eca0f9a602324611f50aee867d3da0c56e2d.jpg)
 
 <figcaption>
 
@@ -92,7 +90,7 @@ One of the major street in central Helsinki, Aleksanterinkatu, has a metal line 
 
 <figure>
 
-![](../2020-02-21-archiving-city-project-part-2/a210913e49dcee2c91688edfce2bf7b5d5b1e0fa.jpg)
+![](a210913e49dcee2c91688edfce2bf7b5d5b1e0fa.jpg)
 
 <figcaption>
 

@@ -1,6 +1,7 @@
 ---
-date: 2020-02-20
-title: Connecting the Conflicting Worlds - Reverse-engineering Yurikuma Arashi
+title: "Connecting the Conflicting Worlds - Reverse-engineering Yurikuma Arashi"
+date: 2020-02-20T21:57:46+02:00
+url: "/2020/02/20/connecting-the-conflicting-worlds-reverse-engineering-yurikuma-arashi/"
 ---
 
 Reflection on Yurikuma to make sense of KolmeLautasta Sarazanmai

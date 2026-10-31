@@ -1,10 +1,8 @@
 ---
-categories:
-- uncategorized-fi
-date: 2018-09-23
-date created: "2025-02-16, 02:26:14"
-date modified: "2025-02-17, 23:15:35"
 title: "\"Outo finranndoboo:n essee\" tai miksi minä olen suomessa."
+date: 2018-09-24T01:50:22+02:00
+url: "/fi/2018/09/24/outo-finranndoboon-essee-tai-miksi-mina-olen-suomessa/"
+htmlLang: fi
 ---
 
 (Minä en muista mitään kielioppia, siis tämä on täynnä virheitä. Tämä on paskan opiskelijan yritys kirjoittaa suomeksi. Käytän sanakirjan ja Google Translate. Niin minä olen paska opiskelija.)

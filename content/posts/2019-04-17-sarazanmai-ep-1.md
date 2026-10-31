@@ -1,8 +1,8 @@
 ---
-categories:
-- uncategorized-en
-date: 2019-04-17
-title: Sarazanmai Ep.1
+title: "Sarazanmai Ep.1"
+date: 2019-04-17T18:54:46+02:00
+url: "/en/2019/04/17/sarazanmai-ep-1/"
+htmlLang: en
 ---
 
 Preliminary reaction to Sarazanmai Ep1. Have not watched Sub, so terms might differ.
