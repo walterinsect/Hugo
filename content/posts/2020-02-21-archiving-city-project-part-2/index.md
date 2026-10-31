@@ -1,10 +1,8 @@
 ---
-categories:
-- uncategorized-en
-date: 2020-02-21
-date created: "2025-02-16, 02:26:14"
-date modified: "2025-02-17, 23:17:24"
-title: Archiving City Project - Part 2
+title: "Archiving City Project - Part 2"
+date: 2020-02-21T02:35:27+02:00
+url: "/en/2020/02/21/archiving-city-project-part-2/"
+htmlLang: en
 ---
 
 Part 2 of the Archiving the City Project, which is about Landscape forgotten, but embedded in the cityscape through monuments.

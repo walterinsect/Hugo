@@ -40,8 +40,8 @@ body > header nav a {
   font-size: 2.1em !important;
   line-height: 1.35 !important;
 }
-/* 記事中の h2 には紙の罫線のような細い下線を引く */
-.prose section h2 {
+/* 記事本文（article の中）の h2 にだけ、紙の罫線のような細い下線を引く */
+.prose article section h2 {
   padding-bottom: 0.3em !important;
   border-bottom: 1px solid var(--rule) !important;
 }

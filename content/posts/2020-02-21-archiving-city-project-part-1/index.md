@@ -1,10 +1,8 @@
 ---
-categories:
-- uncategorized-en
-date: 2020-02-21
-date created: "2025-02-16, 02:26:14"
-date modified: "2025-02-17, 23:17:23"
-title: Archiving city Project - Part 1
+title: "Archiving city Project - Part 1"
+date: 2020-02-21T02:35:13+02:00
+url: "/en/2020/02/21/archiving-city-project-part-1/"
+htmlLang: en
 ---
 
 This is one of the assignments done for the course *"Interrogating the Archive: Preserving and Interpreting Knowledges of the Past"* I took during my Master's. It kinda serves as a trivia of Helsinki's city, and a travel guide for history nerds looking for off-the-beaten-track ways to look at Helsinki. And one of the most enjoyable assignment I did during the 2 years.

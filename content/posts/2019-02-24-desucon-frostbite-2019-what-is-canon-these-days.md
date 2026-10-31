@@ -1,6 +1,7 @@
 ---
-date: 2019-02-24
 title: "Desucon Frostbite 2019: What is Canon these days?"
+date: 2019-02-24T21:10:17+02:00
+url: "/2019/02/24/desucon-frostbite-2019-what-is-canon-these-days/"
 ---
 
 [What is canon these days](https://walterinsect.files.wordpress.com/2019/02/what-is-canon-these-days.pdf "What is canon these days")

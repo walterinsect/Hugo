@@ -34,6 +34,14 @@ title = '極度乾燥しなさい3.0'
     pageRef = '/tags'
     weight = 15
   [[menus.main]]
+    name = 'About'
+    url = '/about-2/'
+    weight = 17
+  [[menus.main]]
+    name = 'About (EN)'
+    url = '/en/about/'
+    weight = 18
+  [[menus.main]]
     name = 'Photos'
     pageRef = '/photos'
     weight = 20

@@ -1,10 +1,8 @@
 ---
-categories:
-- 駄文-ja
-date: 2015-10-07
-date created: "2025-02-16, 02:26:13"
-date modified: "2025-02-17, 22:44:06"
-title: デレマス24話　Barefoot girl感想ツイ
+title: "デレマス24話　Barefoot girl感想ツイ"
+date: 2015-10-07T15:26:14+02:00
+url: "/2015/10/07/デレマス24話　barefoot-girl感想ツイ/"
+tags: ["駄文"]
 ---
 
 うづにゃんとうとい
