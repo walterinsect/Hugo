@@ -1,0 +1,11 @@
+{{- /* Obsidian の囲み枠（> [!note] など）と GitHub の alert を囲み枠として出し、通常の引用はそのまま blockquote にする */ -}}
+{{- if eq .Type "alert" -}}
+<div class="callout" data-callout="{{ .AlertType }}">
+  <div class="callout-title">{{ with .AlertTitle }}{{ . }}{{ else }}{{ .AlertType | title }}{{ end }}</div>
+  <div class="callout-body">{{ .Text }}</div>
+</div>
+{{- else -}}
+<blockquote>
+{{ .Text -}}
+</blockquote>
+{{- end }}
