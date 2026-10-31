@@ -23,7 +23,7 @@ title: スオメンリンナを囲む要塞Krepost Sveaborg―バタフライエ
 
 <figure>
 
-![](../2020-02-20-%E3%82%B9%E3%82%AA%E3%83%A1%E3%83%B3%E3%83%AA%E3%83%B3%E3%83%8A%E3%82%92%E5%9B%B2%E3%82%80%E8%A6%81%E5%A1%9Ekrepost-sveaborg%E2%80%95%E3%83%90%E3%82%BF%E3%83%95%E3%83%A9%E3%82%A4%E3%82%A8%E3%83%95/2d4b04cdc52b9b5014eff4e5b72ab9707926e1d1.jpg)
+![](2d4b04cdc52b9b5014eff4e5b72ab9707926e1d1.jpg)
 
 <figcaption>
 
@@ -37,7 +37,7 @@ title: スオメンリンナを囲む要塞Krepost Sveaborg―バタフライエ
 
 <figure>
 
-![](../2020-02-20-%E3%82%B9%E3%82%AA%E3%83%A1%E3%83%B3%E3%83%AA%E3%83%B3%E3%83%8A%E3%82%92%E5%9B%B2%E3%82%80%E8%A6%81%E5%A1%9Ekrepost-sveaborg%E2%80%95%E3%83%90%E3%82%BF%E3%83%95%E3%83%A9%E3%82%A4%E3%82%A8%E3%83%95/1574fc441c4a6e87af43d279e5953a0523473e05.png)
+![](1574fc441c4a6e87af43d279e5953a0523473e05.png)
 
 <figcaption>
 
@@ -58,7 +58,7 @@ title: スオメンリンナを囲む要塞Krepost Sveaborg―バタフライエ
 
 <figure>
 
-![](../2020-02-20-%E3%82%B9%E3%82%AA%E3%83%A1%E3%83%B3%E3%83%AA%E3%83%B3%E3%83%8A%E3%82%92%E5%9B%B2%E3%82%80%E8%A6%81%E5%A1%9Ekrepost-sveaborg%E2%80%95%E3%83%90%E3%82%BF%E3%83%95%E3%83%A9%E3%82%A4%E3%82%A8%E3%83%95/852f8e2a5618877d41de2a4dbeaf07f877c8679d.jpg)
+![](852f8e2a5618877d41de2a4dbeaf07f877c8679d.jpg)
 
 <figcaption>
 
@@ -74,7 +74,7 @@ Keskuspuistoに残る塹壕。奥には鉄扉で閉ざされた巨大な地下�
 
 - <figure>
 
-  [![](../2020-02-20-%E3%82%B9%E3%82%AA%E3%83%A1%E3%83%B3%E3%83%AA%E3%83%B3%E3%83%8A%E3%82%92%E5%9B%B2%E3%82%80%E8%A6%81%E5%A1%9Ekrepost-sveaborg%E2%80%95%E3%83%90%E3%82%BF%E3%83%95%E3%83%A9%E3%82%A4%E3%82%A8%E3%83%95/cd905aa2833f373953f4ebca1ca95ba3e2f2c635.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_165421-1024x768.jpg)
+  [![](cd905aa2833f373953f4ebca1ca95ba3e2f2c635.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_165421-1024x768.jpg)
 
   <figcaption>
 
@@ -86,7 +86,7 @@ Keskuspuistoに残る塹壕。奥には鉄扉で閉ざされた巨大な地下�
 
 - <figure>
 
-  [![](../2020-02-20-%E3%82%B9%E3%82%AA%E3%83%A1%E3%83%B3%E3%83%AA%E3%83%B3%E3%83%8A%E3%82%92%E5%9B%B2%E3%82%80%E8%A6%81%E5%A1%9Ekrepost-sveaborg%E2%80%95%E3%83%90%E3%82%BF%E3%83%95%E3%83%A9%E3%82%A4%E3%82%A8%E3%83%95/a192c4a68f0522d8158df900b02def9e9f071de6.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_170823-1024x768.jpg)
+  [![](a192c4a68f0522d8158df900b02def9e9f071de6.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_170823-1024x768.jpg)
 
   <figcaption>
 
@@ -98,7 +98,7 @@ Keskuspuistoに残る塹壕。奥には鉄扉で閉ざされた巨大な地下�
 
 - <figure>
 
-  [![](../2020-02-20-%E3%82%B9%E3%82%AA%E3%83%A1%E3%83%B3%E3%83%AA%E3%83%B3%E3%83%8A%E3%82%92%E5%9B%B2%E3%82%80%E8%A6%81%E5%A1%9Ekrepost-sveaborg%E2%80%95%E3%83%90%E3%82%BF%E3%83%95%E3%83%A9%E3%82%A4%E3%82%A8%E3%83%95/2146bfeba572e710835729d8f5162a36aa66759a.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_170106-768x1024.jpg)
+  [![](2146bfeba572e710835729d8f5162a36aa66759a.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_170106-768x1024.jpg)
 
   <figcaption>
 
@@ -110,7 +110,7 @@ Keskuspuistoに残る塹壕。奥には鉄扉で閉ざされた巨大な地下�
 
 - <figure>
 
-  [![](../2020-02-20-%E3%82%B9%E3%82%AA%E3%83%A1%E3%83%B3%E3%83%AA%E3%83%B3%E3%83%8A%E3%82%92%E5%9B%B2%E3%82%80%E8%A6%81%E5%A1%9Ekrepost-sveaborg%E2%80%95%E3%83%90%E3%82%BF%E3%83%95%E3%83%A9%E3%82%A4%E3%82%A8%E3%83%95/6271790efbf0cef17dadc2b64cb5f0dc7e91d2c2.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_183818-768x1024.jpg)
+  [![](6271790efbf0cef17dadc2b64cb5f0dc7e91d2c2.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_183818-768x1024.jpg)
 
   <figcaption>
 
@@ -122,7 +122,7 @@ Keskuspuistoに残る塹壕。奥には鉄扉で閉ざされた巨大な地下�
 
 - <figure>
 
-  [![](../2020-02-20-%E3%82%B9%E3%82%AA%E3%83%A1%E3%83%B3%E3%83%AA%E3%83%B3%E3%83%8A%E3%82%92%E5%9B%B2%E3%82%80%E8%A6%81%E5%A1%9Ekrepost-sveaborg%E2%80%95%E3%83%90%E3%82%BF%E3%83%95%E3%83%A9%E3%82%A4%E3%82%A8%E3%83%95/db09d27a9811f7ff92fe43149cef46d21aa592a3.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_165020-scaled.jpg)
+  [![](db09d27a9811f7ff92fe43149cef46d21aa592a3.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_165020-scaled.jpg)
 
   <figcaption>
 

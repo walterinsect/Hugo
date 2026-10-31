@@ -11,14 +11,14 @@ https://twitter.com/Shiny_412/status/1532365642996715520
 
 ------------------------------------------------------------------------
 
-![Superreview_VER2.0 Archive/post/2022/06/images/utakai-doku-yui.png](Superreview_VER2.0 Archive/post/2022/06/images/utakai-doku-yui.png "wikilink")
-![Superreview_VER2.0 Archive/post/2022/06/images/utakai-sho-kaku.png](Superreview_VER2.0 Archive/post/2022/06/images/utakai-sho-kaku.png "wikilink")
+![](utakai-doku-yui.png)
+![](utakai-sho-kaku.png)
 
 ------------------------------------------------------------------------
 
 ## 書：待ち合わせ書淫の君の顔かんばせの眼鏡がんきょうキラリ映る黄紅葉
 
-![Superreview_VER2.0 Archive/post/2022/06/images/image.png](Superreview_VER2.0 Archive/post/2022/06/images/image.png "wikilink")
+![](image.png)
 題材として「書」を考えた時に、真っ先に思い浮かんだのが桑山千雪さんのこの1枚だったのでそこから作ってみた。
 
 コミュでも中心に置かれている印象的な彼女のアンダーリムのメガネと、文庫本を読む女性の画がすごく好き（多分新海誠が悪い）なので取り上げ、秋の黄色いイチョウの鮮やかさが映り込む、という写真的な歌になった気がする。
@@ -36,7 +36,7 @@ https://twitter.com/Shiny_412/status/1532365642996715520
 次にクリアに題材が思いついたのが「覚」で、これはもうこのカードしかないだろうということでいくつか作ってみた。
 
 <figure>
-<img src="image-1.png" title="wikilink" alt="image-1.png" />
+<img src="image-1.png" alt="" />
 <figcaption aria-hidden="true">image-1.png</figcaption>
 </figure>
 
@@ -59,7 +59,7 @@ https://twitter.com/Shiny_412/status/1532365642996715520
 独は実は自分が提出した題字案だったのだけれど、思ったより苦労した。案としては特定のカードに依らずSHHis、はづきあたりで考えていたのだがうまいこと出てこなかった。
 
 <figure>
-<img src="image-2.png" title="wikilink" alt="image-2.png" />
+<img src="image-2.png" alt="" />
 <figcaption aria-hidden="true">image-2.png</figcaption>
 </figure>
 
