@@ -75,7 +75,7 @@ Keskuspuistoに残る塹壕。奥には鉄扉で閉ざされた巨大な地下�
 
 - <figure>
 
-  [![](cd905aa2833f373953f4ebca1ca95ba3e2f2c635.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_165421-1024x768.jpg)
+  ![](cd905aa2833f373953f4ebca1ca95ba3e2f2c635.jpg)
 
   <figcaption>
 
@@ -87,7 +87,7 @@ Keskuspuistoに残る塹壕。奥には鉄扉で閉ざされた巨大な地下�
 
 - <figure>
 
-  [![](a192c4a68f0522d8158df900b02def9e9f071de6.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_170823-1024x768.jpg)
+  ![](a192c4a68f0522d8158df900b02def9e9f071de6.jpg)
 
   <figcaption>
 
@@ -99,7 +99,7 @@ Keskuspuistoに残る塹壕。奥には鉄扉で閉ざされた巨大な地下�
 
 - <figure>
 
-  [![](2146bfeba572e710835729d8f5162a36aa66759a.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_170106-768x1024.jpg)
+  ![](2146bfeba572e710835729d8f5162a36aa66759a.jpg)
 
   <figcaption>
 
@@ -111,7 +111,7 @@ Keskuspuistoに残る塹壕。奥には鉄扉で閉ざされた巨大な地下�
 
 - <figure>
 
-  [![](6271790efbf0cef17dadc2b64cb5f0dc7e91d2c2.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_183818-768x1024.jpg)
+  ![](6271790efbf0cef17dadc2b64cb5f0dc7e91d2c2.jpg)
 
   <figcaption>
 
@@ -123,7 +123,7 @@ Keskuspuistoに残る塹壕。奥には鉄扉で閉ざされた巨大な地下�
 
 - <figure>
 
-  [![](db09d27a9811f7ff92fe43149cef46d21aa592a3.jpg)](https://wyamazaki.fi/wp-content/uploads/2020/02/IMG_20180630_165020-scaled.jpg)
+  ![](db09d27a9811f7ff92fe43149cef46d21aa592a3.jpg)
 
   <figcaption>
 
