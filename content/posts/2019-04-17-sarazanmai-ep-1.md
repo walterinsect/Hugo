@@ -23,38 +23,56 @@ Why Kappa? Superstition that world forgot through enlightenment and rejection of
 
 ------------------------------------------------------------------------
 
-https://twitter.com/walterinsect/status/1020071732034658309
+{{< xpost url="https://twitter.com/walterinsect/status/1020071732034658309" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2018-07-19" >}}
+さらざんまい、どう考えてもSNS時代の関係性をやる雰囲気がしている。
+{{< /xpost >}}
 
 I'm pretty sure Sarazanmai will be about relationship in SNS age.
 
-https://twitter.com/walterinsect/status/1106224973637668864
+{{< xpost url="https://twitter.com/walterinsect/status/1106224973637668864" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2019-03-14" >}}
+ピングドラムは95年、ユリ熊嵐は2001年、さてさらざんまいはどこだ。
+{{< /xpost >}}
 
 Penguindrum was 1995, Yurikuma was 2001, then when would Sarazanmai be?
 
-https://twitter.com/walterinsect/status/1056070517319520256
+{{< xpost url="https://twitter.com/walterinsect/status/1056070517319520256" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2018-10-27" >}}
+欲望自体はユリ熊嵐でも取り扱われた概念だけどあれの核は「宗教」だと思っているのでどちらかというと対抗的な取り扱われ方をされていた気がするんだよな。そういう意味で男性キャラがマジョリティのさらざんまいは多分カウンターパートとして「欲望」をこちら側のものとして扱うのではないかな。
+{{< /xpost >}}
 
 The issue of Desire is mentioned in Yurikuma, but since the core of that work is religion, so the desire seemed like it was the antithesis to the core message. Based on that, I feel the desire in Sarazanmai would be something on "this side", as a mirror image counterpart of Yurikuma.
 
-https://twitter.com/walterinsect/status/1116728119401041920
+{{< xpost url="https://twitter.com/walterinsect/status/1116728119401041920" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2019-04-12" >}}
+SNSのテーマは次回かなという気がする。欲望の搾取、完全にネットスフィアの話だし箱って多分ネットワーク論における「パケット」まんまでしょ。
+{{< /xpost >}}
 
 The theme about SNS would come in next episode, I guess. The Exploitation of Desire is basically about Internet-sphere. The box is probably based on the "packets" in network jargon.
 
-https://twitter.com/walterinsect/status/1116729327171907589
+{{< xpost url="https://twitter.com/walterinsect/status/1116729327171907589" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2019-04-12" >}}
+欲望の増大を促進するインターネットという空間から人間を取り戻す→「肥大化した欲望の摘出」。欲望搾取は増大傾向にある欲望の暴走、ゾンビ化、だろうか。
+{{< /xpost >}}
 
 Bringing back people from internet-sphere, where it enhances desire =\> "Removal of the swollen desire (shirikodama)". The Exploitation of Desire might be the desire going berserk, and becoming zombie.
 
-https://twitter.com/walterinsect/status/1116729633532149760
+{{< xpost url="https://twitter.com/walterinsect/status/1116729633532149760" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2019-04-12" >}}
+しっかし剣を胸から抜く20年前のあのきれいな絵との対比であるなあ…全部少年にしてケツからキーアイテム抜くの、大変にアレ。
+{{< /xpost >}}
 
 Jesus that contrast of "removing key items from the body" from 20 years ago! Utena had its beauty from the chest, but Sarazanmai is doing that from your asshole...WTF.
 
-https://twitter.com/walterinsect/status/1116725342331445249
+{{< xpost url="https://twitter.com/walterinsect/status/1116725342331445249" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2019-04-12" >}}
+箱、ATフィールドみたいな
+{{< /xpost >}}
 
 So the box is like AT field from Eva.
 
-https://twitter.com/walterinsect/status/1116725942335016961
+{{< xpost url="https://twitter.com/walterinsect/status/1116725942335016961" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2019-04-12" >}}
+やっぱり人類補完計画じゃないか！
+{{< /xpost >}}
 
 It's Human Instrumentality Project! I fucking told you!
 
-https://twitter.com/walterinsect/status/1116726514924519425
+{{< xpost url="https://twitter.com/walterinsect/status/1116726514924519425" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2019-04-12" >}}
+違う、これグローバリゼーションなんかじゃないな。欲望の可視化が起きるサイパースペースにおける自己の規定みたいな話じゃないかこれ。
+{{< /xpost >}}
 
 No, wait this is not about globalization. It's like one's self-defining in the cyberspace where the desires are enhanced.

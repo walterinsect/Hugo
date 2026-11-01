@@ -114,3 +114,49 @@ body > footer {
 .callout[data-callout="cite"] {
   --callout-color: rgb(158 158 158);
 }
+
+/* X のポストの埋め込みと控え（layouts/shortcodes/xpost.html） */
+.xpost {
+  margin: 2em 0 !important;
+}
+.xpost .twitter-tweet {
+  font-style: normal !important;
+}
+.xpost blockquote.twitter-tweet {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  quotes: none;
+}
+.xpost blockquote.twitter-tweet::before,
+.xpost blockquote.twitter-tweet::after {
+  content: none !important;
+}
+.xpost-copy {
+  margin: 0.8em 0 0 !important;
+  padding: 0.7em 1em !important;
+  border-left: 3px solid rgb(128 128 128 / 45%) !important;
+  background: rgb(128 128 128 / 8%);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9em;
+  line-height: 1.7;
+}
+.xpost-head {
+  margin-bottom: 0.3em;
+}
+.xpost-name {
+  font-family: var(--font-accent);
+  font-weight: 700;
+}
+.xpost-id,
+.xpost-head time {
+  opacity: 0.65;
+}
+.xpost-text {
+  word-break: break-word;
+}
+.xpost-source {
+  margin-top: 0.4em;
+  font-size: 0.85em;
+  opacity: 0.65;
+}
