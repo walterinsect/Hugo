@@ -1,0 +1,35 @@
+{{- /*
+  X（旧 Twitter）のポストの埋め込みと、その下の投稿者・ID・本文の控え。
+
+    {{< xpost url="https://twitter.com/ID/status/123" name="表示名" id="ID" date="2018-07-19" >}}
+    ポストの本文
+    {{< /xpost >}}
+
+  name / id / date / 本文を省く（{{< xpost url="…" />}}）と、埋め込みだけを出す。
+  記事の中の書き換えは scripts/xposts.py が行う。控えは記事に書き込まれるので、ポストが消えても残る。
+*/ -}}
+{{- $url := .Get "url" -}}
+{{- $name := .Get "name" -}}
+{{- $id := .Get "id" -}}
+{{- $date := .Get "date" -}}
+{{- $text := trim .Inner " \r\n" -}}
+<div class="xpost">
+  <blockquote class="twitter-tweet" data-dnt="true"><a href="{{ $url }}">{{ $url }}</a></blockquote>
+  {{- if not (.Page.Store.Get "xpost-widgets") }}
+  {{- .Page.Store.Set "xpost-widgets" true }}
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  {{- end }}
+  {{- if $text }}
+  <div class="xpost-copy">
+    <div class="xpost-head">
+      {{- with $name }}<span class="xpost-name">{{ . }}</span>{{ end }}
+      {{- with $id }} <a class="xpost-id" href="https://x.com/{{ . }}" target="_blank" rel="noopener">@{{ . }}</a>{{ end }}
+      {{- with $date }} <time datetime="{{ . }}">{{ time.Format "2006/01/02" . }}</time>{{ end }}
+    </div>
+    <div class="xpost-text">
+      {{- $text | htmlEscape | replaceRE `(https?://[A-Za-z0-9._~:/?#@!$&'()*+,;=%-]+)` `<a href="${1}" target="_blank" rel="noopener">${1}</a>` | replaceRE `\r?\n` "<br>\n" | safeHTML -}}
+    </div>
+    <div class="xpost-source"><a href="{{ $url }}" target="_blank" rel="noopener">元のポストを見る</a></div>
+  </div>
+  {{- end }}
+</div>

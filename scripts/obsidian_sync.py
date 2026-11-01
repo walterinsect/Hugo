@@ -24,6 +24,9 @@ import sys
 
 import yaml
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import xposts  # noqa: E402  X のポストの取得と shortcode（同じ scripts/ にある）
+
 JST = datetime.timezone(datetime.timedelta(hours=9))
 SKIP_DIRS = {".git", ".obsidian", ".trash", "node_modules", "Superreview_v3.0"}
 IMAGE_EXT = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg", ".avif"}
@@ -33,9 +36,6 @@ SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+){0,5}$")
 FM_RE = re.compile(r"\A---[ \t]*\n(.*?)\n---[ \t]*(?:\n|\Z)", re.S)
 FENCE_RE = re.compile(r"^(?P<f>```|~~~)[^\n]*\n.*?^(?P=f)[ \t]*$", re.S | re.M)
 INLINE_CODE_RE = re.compile(r"`[^`\n]+`")
-X_POST_RE = re.compile(
-    r"!\[[^\]]*\]\((https?://(?:www\.)?(?:x|twitter)\.com/[^)\s]+/status/\d+[^)\s]*)\)"
-)
 LANGS = {"ja", "en", "fi"}
 YAML_ERROR_KEY = "_yaml_error"
 
@@ -164,6 +164,7 @@ class Sync:
         except (OSError, ValueError):
             self.state = {}
         self.state.setdefault("images", {})
+        self.xcache = xposts.Cache(os.path.join(site, "scripts", "xposts_cache.json"))
         self.now = datetime.datetime.now(JST).replace(microsecond=0)
 
     # ---- 既存の記事 ----
@@ -242,10 +243,28 @@ class Sync:
             self.report.warn(f"画像を加工できませんでした（そのままコピーします）: {e}")
             return data
 
+    # ---- X のポスト ----
+    def xpost_block(self, url, note_rel):
+        """ポストの埋め込みと、投稿者・ID・本文の控え（shortcode）。取得できなければ、できる範囲の形にする。"""
+        entry, why = self.xcache.get(url)
+        if entry is None:
+            self.report.warn(f"{note_rel}: X のポストの情報を取得できませんでした（埋め込みだけを載せ、次の同期でもう一度試します）: {url} ({why})")
+            return xposts.shortcode(url, None)
+        if entry.get("status") != "ok":
+            self.report.warn(f"{note_rel}: X のポストは取得できません（削除・非公開など）。リンクだけを載せます: {url}")
+            return f"[X のポスト]({url})"
+        return xposts.shortcode(url, entry)
+
     # ---- 本文の変換 ----
     def convert_body(self, note_rel, slug, title, body, pub_index):
         used_names = {}
         warn = self.report.warn
+        xblocks = []
+
+        def x_placeholder(url):
+            # 改行の強制などの変換を受けないよう、いったん印にして、最後に shortcode に戻す
+            xblocks.append(self.xpost_block(url, note_rel))
+            return f"\n\n\ue002{len(xblocks) - 1}\ue003\n\n"
 
         def image_md(name, alt="", width=None):
             rel = self.vault.find_file(name, note_rel)
@@ -294,13 +313,15 @@ class Sync:
         def transform(seg):
             seg = re.sub(r"%%.*?%%", "", seg, flags=re.S)
             seg = re.sub(r"(?m)[ \t]+\^[A-Za-z0-9-]+$", "", seg)
-            seg = X_POST_RE.sub(lambda m: f"[X のポスト]({m.group(1)})", seg)
+            seg = re.sub(r"!\[[^\]]*\]\((" + xposts.STATUS_URL + r")\)", lambda m: x_placeholder(m.group(1)), seg, flags=re.I)
+            seg = re.sub(r"(?m)^<?(" + xposts.STATUS_URL + r")>?[ \t]*$", lambda m: x_placeholder(m.group(1)), seg, flags=re.I)
             seg = re.sub(r"!\[\[([^\]\n]+?)\]\]", embed, seg)
             seg = re.sub(r"(?<!!)\[\[([^\]\n]+?)\]\]", wikilink, seg)
             seg = re.sub(r"!\[([^\]]*)\]\(([^)\n]+)\)", md_image, seg)
             seg = re.sub(r"(?<!=)==(?!=)([^=\n]+?)(?<!=)==(?!=)", r"<mark>\1</mark>", seg)
             seg = re.sub(r"\n{3,}", "\n\n", seg)
-            return harden_breaks(seg)
+            seg = harden_breaks(seg)
+            return re.sub(r"\ue002(\d+)\ue003", lambda m: xblocks[int(m.group(1))], seg)
 
         out, pos = [], 0
         for fm_ in FENCE_RE.finditer(body):
@@ -433,6 +454,7 @@ class Sync:
                 r.removed.append(slug)
 
         if not self.dry:
+            self.xcache.save()
             os.makedirs(os.path.dirname(self.state_path), exist_ok=True)
             with open(self.state_path, "w", encoding="utf-8", newline="\n") as fh:
                 json.dump(self.state, fh, ensure_ascii=False, indent=1, sort_keys=True)

@@ -1,0 +1,75 @@
+# 記事の中の X のポストを、「埋め込み + 投稿者・ID・本文の控え」に書き換える（手動で実行する）。
+# 結果は main ではなく、新しいブランチ（xposts-archive-<番号>）に push する。内容を確認してから、プルリクエストでマージする。
+# 手順の説明は docs/x-posts.md を参照。
+name: Archive X posts
+
+on:
+  workflow_dispatch:
+    inputs:
+      retry_unavailable:
+        description: 以前に取得できなかった（削除・非公開など）ポストを、もう一度試す
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.168.0
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # ポストの投稿者・本文などを、X の oEmbed から取得して scripts/xposts_cache.json に記録する
+      - name: Fetch X posts
+        run: python scripts/xposts.py fetch ${{ inputs.retry_unavailable && '--retry-unavailable' || '' }}
+
+      - name: Convert articles
+        run: python scripts/xposts.py convert
+
+      - name: Install Hugo CLI
+        run: |
+          wget -O "${RUNNER_TEMP}/hugo.deb" "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb" \
+          && sudo dpkg -i "${RUNNER_TEMP}/hugo.deb"
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+          cache: false
+
+      - name: Build check
+        env:
+          HUGO_ENVIRONMENT: production
+          TZ: Asia/Tokyo
+        run: hugo --gc --minify --destination "${RUNNER_TEMP}/site-check"
+
+      - name: Push to a new branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          branch="xposts-archive-${GITHUB_RUN_ID}"
+          git switch -c "$branch"
+          git add content scripts/xposts_cache.json
+          if git diff --cached --quiet; then
+            echo "変更はありません" | tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git commit -m "Archive X posts in articles"
+          git push origin "$branch"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "結果をブランチ \`${branch}\` に push しました。内容を確認して、プルリクエストでマージしてください。" >> "$GITHUB_STEP_SUMMARY"
