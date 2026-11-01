@@ -36,6 +36,7 @@ X_POST_RE = re.compile(
     r"!\[[^\]]*\]\((https?://(?:www\.)?(?:x|twitter)\.com/[^)\s]+/status/\d+[^)\s]*)\)"
 )
 LANGS = {"ja", "en", "fi"}
+YAML_ERROR_KEY = "_yaml_error"
 
 
 class Report:
@@ -58,8 +59,10 @@ def split_front_matter(text):
         return {}, text
     try:
         fm = yaml.safe_load(m.group(1)) or {}
-    except yaml.YAMLError:
-        return {}, text[m.end():]
+    except yaml.YAMLError as e:
+        # publish: true と書かれているのに読めないときに、エラーとして知らせるために印を残す
+        msg = str(e).replace("\n", " ")
+        return {YAML_ERROR_KEY: (msg, m.group(1))}, text[m.end():]
     return (fm if isinstance(fm, dict) else {}), text[m.end():]
 
 
@@ -309,8 +312,17 @@ class Sync:
         if not self.vault.notes:
             r.error("vault にノートが見つかりません。同期を中止しました。")
             return r
-        published, errors_slugs = {}, set()
+        published, errors_slugs, unreadable = {}, set(), set()
         for rel, (fm, _body) in sorted(self.vault.notes.items()):
+            if YAML_ERROR_KEY in fm:
+                msg, raw = fm[YAML_ERROR_KEY]
+                if re.search(r"^publish:\s*true\b", raw, re.M | re.I):
+                    r.error(f"{rel}: 設定欄を読み取れないため公開できません（{msg[:120]}）。"
+                            "値に : や # が入るときは、全体を引用符 \" で囲んでください")
+                    sm = re.search(r"^slug:\s*[\"']?([^\s\"']+)", raw, re.M)
+                    if sm:
+                        unreadable.add(sm.group(1))
+                continue
             if not is_true(fm.get("publish")):
                 continue
             slug = str(fm.get("slug") or "").strip()
@@ -324,7 +336,7 @@ class Sync:
             published[slug] = {"rel": rel, "fm": fm}
         for slug in errors_slugs:
             published.pop(slug, None)
-        protected = set(published) | {
+        protected = set(published) | unreadable | {
             str(fm.get("slug")).strip() for fm, _ in self.vault.notes.values()
             if is_true(fm.get("publish")) and fm.get("slug")
         }
@@ -376,7 +388,12 @@ class Sync:
             if lang in LANGS and lang != "ja":
                 head.append(f"htmlLang: {lang}")
             head += [f"obsidianSource: {q(rel)}", "---", ""]
-            changed = self.write(os.path.join(self.posts_dir, slug, "index.md"), "\n".join(head) + "\n" + text)
+            new_text = "\n".join(head) + "\n" + text
+            path = os.path.join(self.posts_dir, slug, "index.md")
+            if os.path.isfile(path) and strip_lastmod(open(path, encoding="utf-8").read()) == strip_lastmod(new_text):
+                changed = False  # 中身が同じなら、更新日だけを変えて再公開しない
+            else:
+                changed = self.write(path, new_text)
             if slug not in managed:
                 r.created.append(slug)
             elif changed:
@@ -400,6 +417,10 @@ class Sync:
                 json.dump(self.state, fh, ensure_ascii=False, indent=1, sort_keys=True)
                 fh.write("\n")
         return r
+
+
+def strip_lastmod(text):
+    return re.sub(r"(?m)^lastmod: .*\n", "", text, count=1)
 
 
 def harden_breaks(text):
