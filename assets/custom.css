@@ -67,3 +67,50 @@ body > footer {
     font-size: 1.65em !important;
   }
 }
+
+/* Obsidian の囲み枠（> [!note] など。layouts/_default/_markup/render-blockquote.html が出力する） */
+.callout {
+  --callout-color: rgb(68 138 255);
+  /* テーマの指定（div の余白・罫線のリセット）が強いので !important で上書きする */
+  margin: 1.5em 0 !important;
+  padding: 0.8em 1em !important;
+  border-left: 4px solid var(--callout-color) !important;
+  border-radius: 0 6px 6px 0;
+  background: color-mix(in srgb, var(--callout-color) 10%, transparent);
+}
+.callout-title {
+  margin-bottom: 0.3em !important;
+  font-family: var(--font-accent);
+  font-weight: 700;
+}
+.callout-body > :first-child {
+  margin-top: 0 !important;
+}
+.callout-body > :last-child {
+  margin-bottom: 0 !important;
+}
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] {
+  --callout-color: rgb(236 117 0);
+}
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"],
+.callout[data-callout="bug"] {
+  --callout-color: rgb(233 49 71);
+}
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="important"],
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+  --callout-color: rgb(8 185 78);
+}
+.callout[data-callout="quote"],
+.callout[data-callout="cite"] {
+  --callout-color: rgb(158 158 158);
+}

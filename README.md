@@ -1,0 +1,8 @@
+# 極度乾燥しなさい3.0
+
+[Hugo](https://gohugo.io/) で作っているブログ（<https://wyamazaki.fi/>）です。GitHub Pages で公開しています。
+
+- 記事は `content/posts/` にあります。
+- Obsidian で書いた記事の公開手順は [docs/obsidian-publishing.md](docs/obsidian-publishing.md) を見てください。
+- 写真ポートフォリオ（`/photos/`）は Flickr の写真ページの URL から作ります（`content/photos/`）。
+- `main` に push すると、GitHub Actions がサイトを公開します。
