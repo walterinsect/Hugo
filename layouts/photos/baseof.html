@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ if .IsSection }}{{ .Title }}{{ else }}{{ .Title }} | Photos{{ end }} | {{ site.Title }}</title>
     <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="icon" href="{{ site.Params.favicon | default "favicon.ico" | absURL }}">
+    <link rel="apple-touch-icon" href="{{ site.Params.appleTouchIcon | default "apple-touch-icon.png" | absURL }}">
+    {{- /* リンクを貼ったときのカード。アルバムのページは、そのアルバムの表紙を共有画像にする */}}
+    {{- $ogImage := .Params.coverSrc | default (index (site.Params.images | default slice) 0) }}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else if .IsSection }}{{ .Title }}{{ else }}{{ .Title }} | Photos{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    {{- with $ogImage }}
+    <meta property="og:image" content="{{ . }}">
+    <meta name="twitter:card" content="summary_large_image">
+    {{- end }}
     {{- $css := resources.Get "css/photos.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
   </head>

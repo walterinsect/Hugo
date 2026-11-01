@@ -6,6 +6,7 @@
 - 対象: vault 内のすべての .md のうち、先頭の設定欄に `publish: true` があるもの
   （.obsidian、.trash、テンプレートのフォルダ（_templates など）は除く）
 - 出力: content/posts/<slug>/index.md と、使っている画像（記事のフォルダに置く）
+  設定欄の `cover:` で指定した画像は、feature.jpg として置く（Hugo が共有画像（OGP）に使う）
 - 管理: この仕組みで作った記事には `obsidianSource` が付く。付いていない記事（WordPress から
   移した記事など）は、読み書きも削除もしない。
 - 公開を止める: `publish: true` を外す（またはノートを消す）と、その記事のフォルダを消す。
@@ -196,6 +197,8 @@ class Sync:
         src = os.path.join(self.vault.root, src_rel)
         base, ext = os.path.splitext(os.path.basename(src_rel))
         safe = re.sub(r"[\s#?%\\/]+", "-", base).strip("-") or "image"
+        if re.search(r"feature|cover|thumbnail", safe, re.I):
+            safe += "-img"  # この名前の画像は Hugo が共有画像（OGP）に使うので、本文の画像は避ける
         fname = safe + ext.lower()
         if used.get(fname, src_rel) != src_rel:
             fname = f"{safe}-{hashlib.sha1(src_rel.encode()).hexdigest()[:6]}{ext.lower()}"
@@ -213,6 +216,50 @@ class Sync:
                 fh.write(out)
         self.state["images"][key] = digest
         return fname
+
+    def handle_cover(self, note_rel, fm, slug):
+        """設定欄の cover（共有画像・OGP）を、記事のフォルダの feature.jpg にする。変えたら True。"""
+        dest = os.path.join(self.posts_dir, slug, "feature.jpg")
+        key = f"{slug}/feature.jpg"
+        cover = fm.get("cover")
+        if not cover:
+            if os.path.isfile(dest) and key in self.state["images"]:  # cover を外したとき
+                if not self.dry:
+                    os.remove(dest)
+                self.state["images"].pop(key, None)
+                return True
+            return False
+        name = re.sub(r"^!?\[\[(.*?)(?:\|.*)?\]\]$", r"\1", str(cover).strip())
+        rel = self.vault.find_file(name, note_rel)
+        if not rel:
+            self.report.warn(f"{note_rel}: cover の画像が見つかりません: {cover}")
+            return False
+        data = open(os.path.join(self.vault.root, rel), "rb").read()
+        digest = hashlib.sha256(data).hexdigest()
+        if os.path.isfile(dest) and self.state["images"].get(key) == digest:
+            return False
+        try:
+            from PIL import Image, ImageOps
+
+            im = ImageOps.exif_transpose(Image.open(io.BytesIO(data)))
+            if im.mode in ("RGBA", "LA", "P"):  # 透明な部分は白にする
+                im = im.convert("RGBA")
+                bg = Image.new("RGB", im.size, (255, 255, 255))
+                bg.paste(im, mask=im.split()[-1])
+                im = bg
+            im = im.convert("RGB")
+            im.thumbnail((1600, 1600), Image.LANCZOS)
+            buf = io.BytesIO()
+            im.save(buf, "JPEG", quality=85, optimize=True)
+        except Exception as e:  # noqa: BLE001
+            self.report.warn(f"{note_rel}: cover の画像を処理できませんでした: {e}")
+            return False
+        if not self.dry:
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            with open(dest, "wb") as fh:
+                fh.write(buf.getvalue())
+        self.state["images"][key] = digest
+        return True
 
     def process_image(self, data, ext):
         """JPEG は位置情報などの EXIF を消して向きを直し、長辺 MAX_PX に縮める。PNG は大きいときだけ縮める。"""
@@ -315,9 +362,11 @@ class Sync:
             seg = re.sub(r"(?m)[ \t]+\^[A-Za-z0-9-]+$", "", seg)
             seg = re.sub(r"!\[[^\]]*\]\((" + xposts.STATUS_URL + r")\)", lambda m: x_placeholder(m.group(1)), seg, flags=re.I)
             seg = re.sub(r"(?m)^<?(" + xposts.STATUS_URL + r")>?[ \t]*$", lambda m: x_placeholder(m.group(1)), seg, flags=re.I)
+            # Markdown の画像を先に処理する。埋め込み（![[…]]）の変換結果（![](…)）を、もう一度画像として処理しないため
+            # （ファイル名に空白があると、変換後の名前が vault に見つからず、画像が消えてしまう）
+            seg = re.sub(r"!\[([^\]]*)\]\(([^)\n]+)\)", md_image, seg)
             seg = re.sub(r"!\[\[([^\]\n]+?)\]\]", embed, seg)
             seg = re.sub(r"(?<!!)\[\[([^\]\n]+?)\]\]", wikilink, seg)
-            seg = re.sub(r"!\[([^\]]*)\]\(([^)\n]+)\)", md_image, seg)
             seg = re.sub(r"(?<!=)==(?!=)([^=\n]+?)(?<!=)==(?!=)", r"<mark>\1</mark>", seg)
             seg = re.sub(r"\n{3,}", "\n\n", seg)
             seg = harden_breaks(seg)
@@ -436,9 +485,10 @@ class Sync:
                 changed = False  # 中身が同じなら、更新日だけを変えて再公開しない
             else:
                 changed = self.write(path, new_text)
+            cover_changed = self.handle_cover(rel, fm, slug)
             if slug not in managed:
                 r.created.append(slug)
-            elif changed:
+            elif (changed or cover_changed) and slug not in r.updated:
                 r.updated.append(slug)
 
         # 公開を止めた記事を消す
