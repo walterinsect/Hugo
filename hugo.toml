@@ -18,6 +18,8 @@ title = '極度乾燥しなさい3.0'
   mainSections = ['posts']
   # トップページのプロフィール
   name = 'walterinsect'
+  # プロフィール写真（トップページの名前の左）。http で始まる URL が必要（static/images/avatar.jpg を公開した場所）
+  avatar = 'https://wyamazaki.fi/images/avatar.jpg'
   # 空にするとテーマ既定の「A personal blog by …」が出るので、空白 1 文字で名前だけにする
   bio = ' '
   # ヘッダーの SNS アイコン（X）
