@@ -4,6 +4,7 @@
     python scripts/obsidian_sync.py --vault ../Obsidian --site .
 
 - 対象: vault 内のすべての .md のうち、先頭の設定欄に `publish: true` があるもの
+  （.obsidian、.trash、テンプレートのフォルダ（_templates など）は除く）
 - 出力: content/posts/<slug>/index.md と、使っている画像（記事のフォルダに置く）
 - 管理: この仕組みで作った記事には `obsidianSource` が付く。付いていない記事（WordPress から
   移した記事など）は、読み書きも削除もしない。
@@ -104,13 +105,33 @@ def q(s):
     return json.dumps(s, ensure_ascii=False)
 
 
+def template_folders(root):
+    """vault のテンプレートの置き場（標準のテンプレートと Templater の設定）。ここのノートは公開しない。"""
+    folders = {"_templates"}
+    for rel, key in ((".obsidian/templates.json", "folder"),
+                     (".obsidian/plugins/templater-obsidian/data.json", "templates_folder")):
+        try:
+            with open(os.path.join(root, rel), encoding="utf-8") as fh:
+                value = json.load(fh).get(key)
+        except (OSError, ValueError):
+            continue
+        if isinstance(value, str) and value.strip("/ "):
+            folders.add(value.strip("/ "))
+    return folders
+
+
 class Vault:
     def __init__(self, root):
         self.root = root
         self.notes = {}  # rel -> (fm, body)
         self.files = {}  # lower file name -> [rel, ...]
+        self.skip_paths = template_folders(root)
         for dp, dn, fn in os.walk(root):
-            dn[:] = sorted(d for d in dn if d not in SKIP_DIRS)
+            dn[:] = sorted(
+                d for d in dn
+                if d not in SKIP_DIRS
+                and os.path.relpath(os.path.join(dp, d), root).replace(os.sep, "/") not in self.skip_paths
+            )
             for f in sorted(fn):
                 rel = os.path.relpath(os.path.join(dp, f), root).replace(os.sep, "/")
                 if f.lower().endswith(".md"):
