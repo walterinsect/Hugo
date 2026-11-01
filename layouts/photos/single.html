@@ -6,12 +6,14 @@
 
 <div class="photo-grid">
   {{- range .Params.photos }}
-  {{- $photo := partialCached "flickr-oembed.html" (dict "url" .url "src" .src) .url }}
+  {{- /* 取り込んだアルバムは src・width・height を持つので、問い合わせなしで使う。手書きのアルバムは oEmbed で取る */ -}}
+  {{- $photo := dict "page" .url "src" .src "width" .width "height" .height "title" "" }}
+  {{- if not (and .src .width .height) }}{{ $photo = partialCached "flickr-oembed.html" (dict "url" .url "src" .src) .url }}{{ end }}
   {{- $caption := .caption | default $photo.title }}
-  <figure>
+  <figure{{ if and $photo.width $photo.height }} style="--grow:{{ div (mul (int $photo.width) 100) (int $photo.height) }};--basis:{{ div (mul (int $photo.width) 240) (int $photo.height) }}px"{{ end }}>
     <a href="{{ $photo.page }}" target="_blank" rel="noopener">
       {{- if $photo.src }}
-      <img src="{{ $photo.src }}" alt="{{ $caption }}" loading="lazy"{{ with $photo.width }} width="{{ . }}"{{ end }}{{ with $photo.height }} height="{{ . }}"{{ end }}>
+      <img src="{{ $photo.src }}" alt="{{ $caption | default $.Title }}" loading="lazy"{{ with $photo.width }} width="{{ . }}"{{ end }}{{ with $photo.height }} height="{{ . }}"{{ end }}>
       {{- else }}{{ $caption | default "Flickr で見る" }}{{ end -}}
     </a>
     {{- with $caption }}

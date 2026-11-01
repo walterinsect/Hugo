@@ -1,0 +1,95 @@
+# Flickr の公開アルバムを、Photos セクション（content/photos/）に取り込む（手動で実行する）。
+# アルバムを増やした・直したときに、Actions から Run workflow を押す。手順は docs/photos.md を参照。
+name: Sync Flickr albums
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write # 取り込んだアルバムを main にコミットする
+  actions: write # 取り込み後にサイトの公開（hugo.yaml）を起動する
+
+concurrency:
+  group: flickr-sync
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.168.0
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync albums
+        id: sync
+        run: python scripts/flickr_sync.py
+
+      - name: Install Hugo CLI
+        run: |
+          wget -O "${RUNNER_TEMP}/hugo.deb" "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb" \
+          && sudo dpkg -i "${RUNNER_TEMP}/hugo.deb"
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+          cache: false
+
+      # 取り込んだ結果でサイトを作れない場合は、コミットせずに止める
+      - name: Build check
+        env:
+          HUGO_ENVIRONMENT: production
+          TZ: Asia/Tokyo
+        run: hugo --gc --minify --destination "${RUNNER_TEMP}/site-check"
+
+      - name: Commit and push
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A content/photos
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "変更はありません"
+            exit 0
+          fi
+          git commit -m "Sync Flickr albums"
+          pushed=false
+          for i in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            sleep 5
+          done
+          if [ "$pushed" != "true" ]; then
+            echo "::error::main への push に失敗しました"
+            exit 1
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # GITHUB_TOKEN での push は push をきっかけにしたワークフローを起動しないので、公開を直接起動する
+      - name: Trigger deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run hugo.yaml --ref main
+
+      - name: Report album errors
+        if: steps.sync.outputs.errors != '0'
+        run: |
+          echo "::error::取り込めなかったアルバムがあります。実行の Summary に一覧があります。"
+          exit 1

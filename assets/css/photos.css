@@ -50,8 +50,11 @@ h1 { font-weight: 500; margin: 0 0 8px; }
 .album-card:hover img { opacity: .8; }
 .album-title { font-size: 1.1rem; }
 
-.photo-grid { columns: 3 320px; column-gap: var(--gap); margin-top: 24px; }
-.photo-grid figure { margin: 0 0 var(--gap); break-inside: avoid; }
+/* 写真を、Flickr の並び順のまま（左から右へ）、切り抜かずに行ごとに揃えて並べる。
+   各写真の縦横比を --grow と --basis に入れて、行の高さがそろうようにしている */
+.photo-grid { display: flex; flex-wrap: wrap; gap: var(--gap); margin-top: 24px; }
+.photo-grid::after { content: ""; flex-grow: 1000000; }
+.photo-grid figure { margin: 0; flex: var(--grow, 150) 1 var(--basis, 360px); min-width: 0; }
 .photo-grid img { width: 100%; height: auto; display: block; }
 .photo-grid figcaption { color: var(--muted); font-size: .85rem; padding: 4px 2px 0; }
 
