@@ -160,3 +160,9 @@ body > footer {
   font-size: 0.85em;
   opacity: 0.65;
 }
+
+/* トップページのプロフィール写真は、マウスを乗せても回らないようにする
+   （テーマの hover:animate-spin を打ち消す。テーマの指定が強いので !important） */
+.hover\:animate-spin:hover {
+  animation: none !important;
+}
