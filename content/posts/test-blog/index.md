@@ -1,10 +1,10 @@
 ---
 title: "test blog"
 date: 2026-11-01T16:05:07+09:00
-lastmod: 2026-11-01T16:17:36+09:00
+lastmod: 2026-11-01T16:30:50+09:00
 slug: "test-blog"
 tags: ["test"]
-obsidianSource: "test blog.md"
+obsidianSource: "inbox/test blog.md"
 ---
 
 1.   
