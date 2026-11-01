@@ -1,0 +1,46 @@
+{
+  "_comment": "アルバムID → slug（URL の名前）。title は見分けるためのメモ。captions は auto / all / none。hidden: true で載せない。",
+  "user": "walterinsect",
+  "albums": {
+    "72177720335479701": {
+      "slug": "kamata-matsuri-2026",
+      "title": "蒲田祭り2026"
+    },
+    "72177720332954231": {
+      "slug": "osaka-kyoto-202604",
+      "title": "大阪＆京都202604"
+    },
+    "72177720332674717": {
+      "slug": "shinycolors-costume-exhibition",
+      "title": "シャニマス衣装展"
+    },
+    "72177720327041023": {
+      "slug": "las-vegas-honolulu-202505",
+      "title": "Las Vegas+Honolulu 202505"
+    },
+    "72177720325694552": {
+      "slug": "kanazawa-202504",
+      "title": "金沢202504"
+    },
+    "72177720324908258": {
+      "slug": "marunouchi-line-20250406",
+      "title": "丸ノ内線20250406"
+    },
+    "72177720324299760": {
+      "slug": "best-of-bests",
+      "title": "Best of bests"
+    },
+    "72177720324296738": {
+      "slug": "new-york-202503",
+      "title": "New York 202503"
+    },
+    "72177720323843611": {
+      "slug": "corpses-in-the-city",
+      "title": "街に死体"
+    },
+    "72177720323860819": {
+      "slug": "kanazawa-202502",
+      "title": "金沢202502"
+    }
+  }
+}
