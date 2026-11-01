@@ -65,6 +65,11 @@ def parse_date(s):
     return None
 
 
+def link_media(text):
+    """画像・動画へのリンクは `pic.twitter.com/…` と、スキームなしで入るので、リンクにできるよう https:// を付ける。"""
+    return re.sub(r"(?<![/\w.])(pic\.(?:twitter|x)\.com/[A-Za-z0-9]+)", r"https://\1", text)
+
+
 def parse_oembed(data, url):
     """oEmbed の応答（dict）から、控えに使う情報を取り出す。読み取れなければ None。"""
     markup = data.get("html") or ""
@@ -75,6 +80,7 @@ def parse_oembed(data, url):
     body = re.sub(r"<a\b[^>]*>(.*?)</a>", r"\1", body, flags=re.S)
     body = re.sub(r"<[^>]+>", "", body)
     text = html.unescape(body).replace("\r", "").strip()
+    text = link_media(text)
     handle = ""
     hm = re.match(r"https?://(?:www\.)?(?:twitter|x)\.com/([^/?#]+)", data.get("author_url") or "")
     if hm:

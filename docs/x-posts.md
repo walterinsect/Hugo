@@ -16,6 +16,8 @@
 
 ## 今ある記事を書き換える（一度だけ）
 
+（記事44件は、すでに書き換えました。ここは、あとで同じ作業が必要になったとき用の手順です。）
+
 1. GitHub の **Actions → Archive X posts → Run workflow** を押します。
 2. 記事の中のポスト（`twitter.com` / `x.com` の `/status/…` の URL）を、X の oEmbed から取得して、
    `scripts/xposts_cache.json` に記録し、記事を書き換えます。

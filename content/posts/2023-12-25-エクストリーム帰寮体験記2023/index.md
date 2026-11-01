@@ -25,12 +25,18 @@ url: "/2023/12/25/エクストリーム帰寮体験記2023/"
 面白くないので東京ー京都の往復旅程を大回り乗車でやることにしました。  
 経路は立川ー西国分寺ー武蔵浦和ー大宮ー金沢ー山科ー東京ー西国分寺の6の字大回り乗車です。
 
-https://twitter.com/walterinsect/status/1730398934949109802
+{{< xpost url="https://twitter.com/walterinsect/status/1730398934949109802" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+アホ旅程 https://pic.twitter.com/EQsxCpxt0m
+{{< /xpost >}}
 
 かがやきで大宮から金沢までまったり乗車し、金沢では寿司を補給しました。  
 その後は初めてなのに乗り納めになるであろう金沢発大阪行きのサンダーバードです。敦賀発になったらまた乗りに来ようかなと思います。
 
-https://twitter.com/walterinsect/status/1730456060195160189
+{{< xpost url="https://twitter.com/walterinsect/status/1730456060195160189" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+金沢で寿司を食って681系のサンダーバードで京都へ。
+
+新幹線敦賀延伸したらこの区間で乗れることは少なくなるんだろうねえ。 https://pic.twitter.com/i5YNQdJ9Ru
+{{< /xpost >}}
 
 京都について、スムーズに190円を払って京都駅で途中下車をキメました。
 
@@ -56,22 +62,32 @@ https://twitter.com/walterinsect/status/1730456060195160189
 フラッシュライトで照らしながら、熊鈴を鳴らしながらとりあえず川下に進みました。  
 そうしていると現れたのは標識のステッカーです。
 
-https://twitter.com/walterinsect/status/1730622466685599916
+{{< xpost url="https://twitter.com/walterinsect/status/1730622466685599916" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+#エクストリーム帰寮2023
+
+滋賀かー https://pic.twitter.com/oscRszuSUx
+{{< /xpost >}}
 
 滋賀県に来てしまったようです。地理が全くわかりませんが、とりあえず西に向かえば京都です。またとりあえず川を下れば琵琶湖であろうということで、まずは川を下ってゆきました。途中鹿をビビらせて川に落としながら進むと出てきた看板。
 
-https://twitter.com/walterinsect/status/1730623078479298564
+{{< xpost url="https://twitter.com/walterinsect/status/1730623078479298564" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+信楽ってことは琵琶湖の南か？#エクストリーム帰寮2023 https://pic.twitter.com/zZ3l5W8cU8
+{{< /xpost >}}
 
 信楽といえば昔の朝ドラで取り上げられていたなと思い出しつつ、だいたい滋賀の南の山の中だったはず、という知識がおぼろげに蘇ります。  
 幸い川が南北に流れる土地だったため、川沿いに進めばよいのです。このあたりでカシオペア座と北斗七星も見えたため、北に進路を取りました。
 
 しかし地名がわからない。自分が大津市にいることはわかっても標識の地名に全く覚えがないのです。義務教育中学校中退（）のディスアドバンテージが発揮されてしまいました。
 
-https://twitter.com/walterinsect/status/1730628164462972971
+{{< xpost url="https://twitter.com/walterinsect/status/1730628164462972971" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+新名神高速道路ってたしか山の中通っててそれを背にして北に向かってるからとりあえずこれ降りたら琵琶湖じゃねえか？ https://pic.twitter.com/cp9wAHVTO1
+{{< /xpost >}}
 
 新名神はなんとか山の中であるという知識があったので川を下る選択肢はゆるぎません。とりあえず北へ。
 
-https://twitter.com/walterinsect/status/1730629239651831826
+{{< xpost url="https://twitter.com/walterinsect/status/1730629239651831826" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+草津ってたしか琵琶湖の南岸の宿場町だからこれ北に行けば琵琶湖は確定。 https://pic.twitter.com/Wn6D41IcII
+{{< /xpost >}}
 
 草津、という地名も目にして、これを進めば東海道である、という確信を得ました。草津の宿に向かえば多分当該道があるだろうと青標識の草津方面にルートを取りました。
 
@@ -81,11 +97,15 @@ https://twitter.com/walterinsect/status/1730629239651831826
 
 草津市に入り、住宅街に入ると見えたのはコンビニです。開始2時間でやっと文明に戻ってきました。
 
-https://twitter.com/walterinsect/status/1730649200336179541
+{{< xpost url="https://twitter.com/walterinsect/status/1730649200336179541" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+翼よ、あれがセブンの光、文明の光だ！#エクストリーム帰寮2023 https://pic.twitter.com/zp8h7pUYv1
+{{< /xpost >}}
 
 ひたすらに国道1号を目指しながら途中でJR東海の線路をこえます。当時は在来線の東海道本線だと思っていましたが、あとでよく考えたら東海道新幹線でした。大垣のこっち側だもんな。
 
-https://twitter.com/walterinsect/status/1730654682107048321
+{{< xpost url="https://twitter.com/walterinsect/status/1730654682107048321" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+線路越えた。ということは東海道本線のはずであるが側道がないのでとりあえず先に。#エクストリーム帰寮2023 https://pic.twitter.com/n3kpvBmqU6
+{{< /xpost >}}
 
 途中の分岐点で京滋バイパスを行くことも考えましたが、自動車専用っぽかったので普通の国道1号に合流することにしました。（後で調べたらこれは英断だったようです）
 
@@ -93,7 +113,9 @@ https://twitter.com/walterinsect/status/1730654682107048321
 
 このあたりから苦しみが加速します。支給の食パンを忘れたことを後悔し、手持ちのお茶がキンキンに冷えてしまっていることがしんどい旅路でした。寒冷期の野外行動は体温維持とカロリーが大事ですね。
 
-https://twitter.com/walterinsect/status/1730659810247577991
+{{< xpost url="https://twitter.com/walterinsect/status/1730659810247577991" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+この時間のこの寒さで吉牛は誘惑がヤバいでしょ#エクストリーム帰寮2023 https://pic.twitter.com/lLZG1XHfYD
+{{< /xpost >}}
 
 いつまで経っても大津市が終わらないので大津市にキレ始めました。デカすぎだろ。
 
@@ -108,11 +130,15 @@ https://twitter.com/walterinsect/status/1730659810247577991
 
 夜明けを迎えましたがまだ京都府に入りません。大津市追分町から出られないかと思いました。時折ハッシュタグを見ながら進みます。TLでエクストリーム帰寮中の天才のシャニマスPがDaybreak Ageを夜明けとともに聞いていたので自分も聞きながら頑張りました。（シャニマスはいいぞ！）
 
-https://twitter.com/walterinsect/status/1730705047363920380
+{{< xpost url="https://twitter.com/walterinsect/status/1730705047363920380" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+やっと京都入った……#エクストリーム帰寮2023 https://pic.twitter.com/MNQEB86eVN
+{{< /xpost >}}
 
 京都東ICを超え、やっと京都府に足を踏み入れました。しかし困ったことに名神高速の高架がクソでかいせいでルートの取り方が分からなくなりました。仕方なく南側を行ったらあっという間に山の上になり、東海道新幹線の高架まで南下してしまいました。
 
-https://twitter.com/walterinsect/status/1730711472597283133
+{{< xpost url="https://twitter.com/walterinsect/status/1730711472597283133" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+クソデカ発動機をみて国道を確信。#エクストリーム帰寮2023 https://pic.twitter.com/iZWcupW4kH
+{{< /xpost >}}
 
 地形から山にいるのはおかしいなと思い始め、途中で北側に転進します。坂を下るとあっという間に大きな道に合流します。ちょうど最近ホットなクソでか発動機の看板が見えたので国道1号に戻ってきた確信を得ます。（中古車、牛丼、ラーメン、コンビニが延々と続くのが国道のあるべき姿です）
 
@@ -124,11 +150,15 @@ https://twitter.com/walterinsect/status/1730711472597283133
 
 ひたすら続く登り坂で狂いそうになりながら東山方面に抜けるべく国道1号を進みます。でかいトンネルを見て行き止まりを覚悟しましたが、そこは京都の良さなのでしょうか、古い隧道（カタカナではなくこちらがふさわしそうな）が現れました。途中来ていたジャケットに汗がしみまくり、スマホが誤動作して寝ている友人に電話をかけたりもしましたが。
 
-https://twitter.com/walterinsect/status/1730723616206237890
+{{< xpost url="https://twitter.com/walterinsect/status/1730723616206237890" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+oh hell nah https://pic.twitter.com/3joOBSjjmE
+{{< /xpost >}}
 
 それをくぐって、下れば洛中が見えます。
 
-https://twitter.com/walterinsect/status/1730727782697804064
+{{< xpost url="https://twitter.com/walterinsect/status/1730727782697804064" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+京都が誇る対都市兵器京都タワーミサイル（）#エクストリーム帰寮2023 https://pic.twitter.com/dsAjEOuH5F
+{{< /xpost >}}
 
 京都タワーは名所としてはしょぼい部類に入ると思うのですが（京都市民の皆さんごめんなさい、でもあれは流石に...）遠くから見えることに価値があるのかもしれません。実際東山五条までの道を下りきったのはあれを見たことで湧いてきた希望があってこそでした。
 
@@ -136,15 +166,23 @@ https://twitter.com/walterinsect/status/1730727782697804064
 
 何度も京都に来ていて見覚えのある東大路四条のクソ狭い歩道と八坂神社を超え、2ヶ月前に早見沙織さんのオーケストラライブで来たロームシアター近辺を通過し、なんとか丸太町通まで到達しました。このあたりで足も限界、眠気も限界です。
 
-https://twitter.com/walterinsect/status/1730737877599093024
+{{< xpost url="https://twitter.com/walterinsect/status/1730737877599093024" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-01" >}}
+ほぼついた#エクストリーム帰寮2023 https://pic.twitter.com/O4tp4wyKHY
+{{< /xpost >}}
 
 丸太町通を左に折れ、アーティスティックなタテカンを横目に8時間ぶりに熊野寮に戻ってきたのでした。
 
-https://twitter.com/walterinsect/status/1730740524230095260
+{{< xpost url="https://twitter.com/walterinsect/status/1730740524230095260" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-02" >}}
+無事帰寮。30kmをジャストアンダー8時間といったところ。ルートは後でトラッキングデータ見ながら精査したいところ。
+
+熊野寮運営各位、参加各位お疲れ様でした。#エクストリーム帰寮2023 https://pic.twitter.com/oLfvZxyXKo
+{{< /xpost >}}
 
 # 結果と振り返り
 
-https://twitter.com/walterinsect/status/1731124339939184899
+{{< xpost url="https://twitter.com/walterinsect/status/1731124339939184899" name="オフトゥンと戦うツイ廃🍅バイ百合ンガル" id="walterinsect" date="2023-12-03" >}}
+昨日の歩行距離と歩数トータルです。この前日に東京から金沢周りで上洛してるので14000歩加算です。#エクストリーム帰寮2023 https://pic.twitter.com/41C76ypMrr
+{{< /xpost >}}
 
 とりあえずFitbitいわく65000歩、Google Mapのロケーション履歴曰く33kmぐらい歩いた計算になります。  
 土地勘のない（）よそ者にしては良いんじゃないでしょうか。
