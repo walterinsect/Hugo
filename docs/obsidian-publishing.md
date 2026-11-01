@@ -20,6 +20,7 @@ Obsidian のノート ──push──▶ Obsidian リポジトリ
 ## ノートの書き方
 
 ノートの先頭（設定欄）に、次を書きます。ノートはどのフォルダにあっても構いません。
+**ただし、Obsidian のテンプレートのフォルダ（今は `_templates/`。標準のテンプレートと Templater の設定で指定したフォルダ）の中のノートは、公開しません。**
 
 ```yaml
 ---
@@ -52,7 +53,8 @@ publish: true
 その記事だけ公開されず、Actions が失敗のお知らせを出します（他の記事は反映されます）。
 
 ### 新しいノートのひな形
-Obsidian の `_templates/` に、次の内容で `Blog template.md` を作ると便利です。
+Obsidian の `_templates/` に、次の内容で `Blog template.md` を作ると便利です。ひな形の `publish` は `false` にしておいてください
+（`true` にすると、そこから作ったノートが、書きかけでも公開されます）。
 
 ```
 ---
